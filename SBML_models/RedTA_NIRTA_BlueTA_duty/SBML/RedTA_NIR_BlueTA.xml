@@ -1,0 +1,5108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created by COPASI version 4.44 (Build 295) on 2025-12-03 20:26 with libSBML version 5.20.0. -->
+<sbml xmlns="http://www.sbml.org/sbml/level2/version4" level="2" version="4">
+  <model metaid="COPASI0" id="RedTA_NIRTA_BlueTA" name="RedTA_NIRTA_BlueTA">
+    <annotation>
+      <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
+        <rdf:Description rdf:about="#COPASI0">
+          <dcterms:created rdf:parseType="Resource">
+            <dcterms:W3CDTF>2025-11-13T21:03:41Z</dcterms:W3CDTF>
+          </dcterms:created>
+          <dcterms:modified rdf:parseType="Resource">
+            <dcterms:W3CDTF>2025-11-13T21:03:41Z</dcterms:W3CDTF>
+          </dcterms:modified>
+        </rdf:Description>
+      </rdf:RDF>
+      <copasi:COPASI xmlns:copasi="http://www.copasi.org/static/sbml">
+        <rdf:RDF xmlns:dcterms="http://purl.org/dc/terms/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+          <rdf:Description rdf:about="#COPASI0">
+            <dcterms:created>
+              <rdf:Description>
+                <dcterms:W3CDTF>2025-11-13T21:03:41Z</dcterms:W3CDTF>
+              </rdf:Description>
+            </dcterms:created>
+          </rdf:Description>
+        </rdf:RDF>
+      </copasi:COPASI>
+    </annotation>
+    <listOfFunctionDefinitions>
+      <functionDefinition id="N_r_0" name="N_r">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <lambda>
+            <bvar>
+              <ci> delta_r </ci>
+            </bvar>
+            <bvar>
+              <ci> k_N_r </ci>
+            </bvar>
+            <bvar>
+              <ci> N </ci>
+            </bvar>
+            <bvar>
+              <ci> K_ct_r </ci>
+            </bvar>
+            <bvar>
+              <ci> K_N_r </ci>
+            </bvar>
+            <bvar>
+              <ci> K_F_r </ci>
+            </bvar>
+            <bvar>
+              <ci> mF_r </ci>
+            </bvar>
+            <bvar>
+              <ci> n_r </ci>
+            </bvar>
+            <bvar>
+              <ci> BP_r </ci>
+            </bvar>
+            <bvar>
+              <ci> delta_n </ci>
+            </bvar>
+            <bvar>
+              <ci> k_N_n </ci>
+            </bvar>
+            <bvar>
+              <ci> K_ct_n </ci>
+            </bvar>
+            <bvar>
+              <ci> K_N_n </ci>
+            </bvar>
+            <bvar>
+              <ci> K_F_n </ci>
+            </bvar>
+            <bvar>
+              <ci> mF_n </ci>
+            </bvar>
+            <bvar>
+              <ci> n_n </ci>
+            </bvar>
+            <bvar>
+              <ci> BP_n </ci>
+            </bvar>
+            <bvar>
+              <ci> delta_b </ci>
+            </bvar>
+            <bvar>
+              <ci> k_N_b </ci>
+            </bvar>
+            <bvar>
+              <ci> K_ct_b </ci>
+            </bvar>
+            <bvar>
+              <ci> K_N_b </ci>
+            </bvar>
+            <bvar>
+              <ci> K_F_b </ci>
+            </bvar>
+            <bvar>
+              <ci> mF_b </ci>
+            </bvar>
+            <bvar>
+              <ci> n_b </ci>
+            </bvar>
+            <bvar>
+              <ci> BP_b </ci>
+            </bvar>
+            <apply>
+              <plus/>
+              <apply>
+                <times/>
+                <ci> delta_r </ci>
+                <ci> k_N_r </ci>
+                <apply>
+                  <divide/>
+                  <apply>
+                    <power/>
+                    <ci> N </ci>
+                    <ci> K_ct_r </ci>
+                  </apply>
+                  <apply>
+                    <plus/>
+                    <apply>
+                      <power/>
+                      <ci> N </ci>
+                      <ci> K_ct_r </ci>
+                    </apply>
+                    <ci> K_N_r </ci>
+                  </apply>
+                </apply>
+                <apply>
+                  <divide/>
+                  <ci> K_F_r </ci>
+                  <apply>
+                    <plus/>
+                    <apply>
+                      <power/>
+                      <ci> mF_r </ci>
+                      <ci> n_r </ci>
+                    </apply>
+                    <ci> K_F_r </ci>
+                  </apply>
+                </apply>
+                <ci> BP_r </ci>
+              </apply>
+              <apply>
+                <times/>
+                <ci> delta_n </ci>
+                <ci> k_N_n </ci>
+                <apply>
+                  <divide/>
+                  <apply>
+                    <power/>
+                    <ci> N </ci>
+                    <ci> K_ct_n </ci>
+                  </apply>
+                  <apply>
+                    <plus/>
+                    <apply>
+                      <power/>
+                      <ci> N </ci>
+                      <ci> K_ct_n </ci>
+                    </apply>
+                    <ci> K_N_n </ci>
+                  </apply>
+                </apply>
+                <apply>
+                  <divide/>
+                  <ci> K_F_n </ci>
+                  <apply>
+                    <plus/>
+                    <apply>
+                      <power/>
+                      <ci> mF_n </ci>
+                      <ci> n_n </ci>
+                    </apply>
+                    <ci> K_F_n </ci>
+                  </apply>
+                </apply>
+                <ci> BP_n </ci>
+              </apply>
+              <apply>
+                <times/>
+                <ci> delta_b </ci>
+                <ci> k_N_b </ci>
+                <apply>
+                  <divide/>
+                  <apply>
+                    <power/>
+                    <ci> N </ci>
+                    <ci> K_ct_b </ci>
+                  </apply>
+                  <apply>
+                    <plus/>
+                    <apply>
+                      <power/>
+                      <ci> N </ci>
+                      <ci> K_ct_b </ci>
+                    </apply>
+                    <ci> K_N_b </ci>
+                  </apply>
+                </apply>
+                <apply>
+                  <divide/>
+                  <ci> K_F_b </ci>
+                  <apply>
+                    <plus/>
+                    <apply>
+                      <power/>
+                      <ci> mF_b </ci>
+                      <ci> n_b </ci>
+                    </apply>
+                    <ci> K_F_b </ci>
+                  </apply>
+                </apply>
+                <ci> BP_b </ci>
+              </apply>
+            </apply>
+          </lambda>
+        </math>
+      </functionDefinition>
+      <functionDefinition id="Y_LD_r_r_0" name="Y_LD_r_r">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <lambda>
+            <bvar>
+              <ci> k_R_r </ci>
+            </bvar>
+            <bvar>
+              <ci> I_r </ci>
+            </bvar>
+            <bvar>
+              <ci> b_D_r </ci>
+            </bvar>
+            <bvar>
+              <ci> k_I_r </ci>
+            </bvar>
+            <bvar>
+              <ci> Y_LD_r </ci>
+            </bvar>
+            <bvar>
+              <ci> Y_DD_r </ci>
+            </bvar>
+            <bvar>
+              <ci> Y_LL_r </ci>
+            </bvar>
+            <bvar>
+              <ci> k_N_r </ci>
+            </bvar>
+            <bvar>
+              <ci> N </ci>
+            </bvar>
+            <bvar>
+              <ci> K_ct_r </ci>
+            </bvar>
+            <bvar>
+              <ci> K_N_r </ci>
+            </bvar>
+            <bvar>
+              <ci> K_F_r </ci>
+            </bvar>
+            <bvar>
+              <ci> mF_r </ci>
+            </bvar>
+            <bvar>
+              <ci> n_r </ci>
+            </bvar>
+            <apply>
+              <minus/>
+              <apply>
+                <plus/>
+                <apply>
+                  <times/>
+                  <apply>
+                    <minus/>
+                    <apply>
+                      <plus/>
+                      <apply>
+                        <times/>
+                        <ci> k_R_r </ci>
+                        <apply>
+                          <plus/>
+                          <apply>
+                            <minus/>
+                            <cn> 1 </cn>
+                            <ci> I_r </ci>
+                          </apply>
+                          <ci> b_D_r </ci>
+                        </apply>
+                      </apply>
+                      <apply>
+                        <times/>
+                        <ci> k_I_r </ci>
+                        <ci> I_r </ci>
+                      </apply>
+                    </apply>
+                  </apply>
+                  <ci> Y_LD_r </ci>
+                </apply>
+                <apply>
+                  <times/>
+                  <ci> k_I_r </ci>
+                  <ci> I_r </ci>
+                  <ci> Y_DD_r </ci>
+                </apply>
+                <apply>
+                  <times/>
+                  <ci> k_R_r </ci>
+                  <apply>
+                    <plus/>
+                    <apply>
+                      <minus/>
+                      <cn> 1 </cn>
+                      <ci> I_r </ci>
+                    </apply>
+                    <ci> b_D_r </ci>
+                  </apply>
+                  <ci> Y_LL_r </ci>
+                </apply>
+              </apply>
+              <apply>
+                <times/>
+                <ci> k_N_r </ci>
+                <apply>
+                  <divide/>
+                  <apply>
+                    <power/>
+                    <ci> N </ci>
+                    <ci> K_ct_r </ci>
+                  </apply>
+                  <apply>
+                    <plus/>
+                    <apply>
+                      <power/>
+                      <ci> N </ci>
+                      <ci> K_ct_r </ci>
+                    </apply>
+                    <ci> K_N_r </ci>
+                  </apply>
+                </apply>
+                <apply>
+                  <divide/>
+                  <ci> K_F_r </ci>
+                  <apply>
+                    <plus/>
+                    <apply>
+                      <power/>
+                      <ci> mF_r </ci>
+                      <ci> n_r </ci>
+                    </apply>
+                    <ci> K_F_r </ci>
+                  </apply>
+                </apply>
+                <ci> Y_LD_r </ci>
+              </apply>
+            </apply>
+          </lambda>
+        </math>
+      </functionDefinition>
+      <functionDefinition id="J_r_r_0" name="J_r_r">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <lambda>
+            <bvar>
+              <ci> b_J_r </ci>
+            </bvar>
+            <bvar>
+              <ci> K_F_r </ci>
+            </bvar>
+            <bvar>
+              <ci> mF_r </ci>
+            </bvar>
+            <bvar>
+              <ci> n_r </ci>
+            </bvar>
+            <bvar>
+              <ci> k_K_r </ci>
+            </bvar>
+            <bvar>
+              <ci> Y_DD_r </ci>
+            </bvar>
+            <bvar>
+              <ci> J_r </ci>
+            </bvar>
+            <bvar>
+              <ci> k_H_r </ci>
+            </bvar>
+            <bvar>
+              <ci> J_p_r </ci>
+            </bvar>
+            <bvar>
+              <ci> k_p_r </ci>
+            </bvar>
+            <bvar>
+              <ci> Y_LD_r </ci>
+            </bvar>
+            <bvar>
+              <ci> Y_DL_r </ci>
+            </bvar>
+            <bvar>
+              <ci> Y_LL_r </ci>
+            </bvar>
+            <bvar>
+              <ci> k_N_r </ci>
+            </bvar>
+            <bvar>
+              <ci> N </ci>
+            </bvar>
+            <bvar>
+              <ci> K_ct_r </ci>
+            </bvar>
+            <bvar>
+              <ci> K_N_r </ci>
+            </bvar>
+            <apply>
+              <minus/>
+              <apply>
+                <plus/>
+                <apply>
+                  <minus/>
+                  <apply>
+                    <times/>
+                    <ci> b_J_r </ci>
+                    <apply>
+                      <divide/>
+                      <ci> K_F_r </ci>
+                      <apply>
+                        <plus/>
+                        <apply>
+                          <power/>
+                          <ci> mF_r </ci>
+                          <ci> n_r </ci>
+                        </apply>
+                        <ci> K_F_r </ci>
+                      </apply>
+                    </apply>
+                  </apply>
+                  <apply>
+                    <times/>
+                    <ci> k_K_r </ci>
+                    <ci> Y_DD_r </ci>
+                    <ci> J_r </ci>
+                  </apply>
+                </apply>
+                <apply>
+                  <times/>
+                  <ci> k_H_r </ci>
+                  <ci> J_p_r </ci>
+                </apply>
+                <apply>
+                  <times/>
+                  <ci> k_p_r </ci>
+                  <apply>
+                    <plus/>
+                    <ci> Y_LD_r </ci>
+                    <ci> Y_DL_r </ci>
+                    <ci> Y_LL_r </ci>
+                  </apply>
+                  <ci> J_p_r </ci>
+                </apply>
+              </apply>
+              <apply>
+                <times/>
+                <ci> k_N_r </ci>
+                <apply>
+                  <divide/>
+                  <apply>
+                    <power/>
+                    <ci> N </ci>
+                    <ci> K_ct_r </ci>
+                  </apply>
+                  <apply>
+                    <plus/>
+                    <apply>
+                      <power/>
+                      <ci> N </ci>
+                      <ci> K_ct_r </ci>
+                    </apply>
+                    <ci> K_N_r </ci>
+                  </apply>
+                </apply>
+                <apply>
+                  <divide/>
+                  <ci> K_F_r </ci>
+                  <apply>
+                    <plus/>
+                    <apply>
+                      <power/>
+                      <ci> mF_r </ci>
+                      <ci> n_r </ci>
+                    </apply>
+                    <ci> K_F_r </ci>
+                  </apply>
+                </apply>
+                <ci> J_r </ci>
+              </apply>
+            </apply>
+          </lambda>
+        </math>
+      </functionDefinition>
+      <functionDefinition id="cl_r_r_0" name="cl_r_r">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <lambda>
+            <bvar>
+              <ci> k_T_r </ci>
+            </bvar>
+            <bvar>
+              <ci> J_p_r </ci>
+            </bvar>
+            <bvar>
+              <ci> K_J_r </ci>
+            </bvar>
+            <bvar>
+              <ci> K_F_r </ci>
+            </bvar>
+            <bvar>
+              <ci> mF_r </ci>
+            </bvar>
+            <bvar>
+              <ci> n_r </ci>
+            </bvar>
+            <bvar>
+              <ci> gamma_cl_r </ci>
+            </bvar>
+            <bvar>
+              <ci> k_N_r </ci>
+            </bvar>
+            <bvar>
+              <ci> N </ci>
+            </bvar>
+            <bvar>
+              <ci> K_ct_r </ci>
+            </bvar>
+            <bvar>
+              <ci> K_N_r </ci>
+            </bvar>
+            <bvar>
+              <ci> cl_r </ci>
+            </bvar>
+            <apply>
+              <minus/>
+              <apply>
+                <times/>
+                <ci> k_T_r </ci>
+                <apply>
+                  <divide/>
+                  <apply>
+                    <power/>
+                    <ci> J_p_r </ci>
+                    <cn> 2 </cn>
+                  </apply>
+                  <apply>
+                    <plus/>
+                    <apply>
+                      <power/>
+                      <ci> J_p_r </ci>
+                      <cn> 2 </cn>
+                    </apply>
+                    <ci> K_J_r </ci>
+                  </apply>
+                </apply>
+                <apply>
+                  <divide/>
+                  <ci> K_F_r </ci>
+                  <apply>
+                    <plus/>
+                    <apply>
+                      <power/>
+                      <ci> mF_r </ci>
+                      <ci> n_r </ci>
+                    </apply>
+                    <ci> K_F_r </ci>
+                  </apply>
+                </apply>
+              </apply>
+              <apply>
+                <times/>
+                <apply>
+                  <plus/>
+                  <ci> gamma_cl_r </ci>
+                  <apply>
+                    <times/>
+                    <ci> k_N_r </ci>
+                    <apply>
+                      <divide/>
+                      <apply>
+                        <power/>
+                        <ci> N </ci>
+                        <ci> K_ct_r </ci>
+                      </apply>
+                      <apply>
+                        <plus/>
+                        <apply>
+                          <power/>
+                          <ci> N </ci>
+                          <ci> K_ct_r </ci>
+                        </apply>
+                        <ci> K_N_r </ci>
+                      </apply>
+                    </apply>
+                    <apply>
+                      <divide/>
+                      <ci> K_F_r </ci>
+                      <apply>
+                        <plus/>
+                        <apply>
+                          <power/>
+                          <ci> mF_r </ci>
+                          <ci> n_r </ci>
+                        </apply>
+                        <ci> K_F_r </ci>
+                      </apply>
+                    </apply>
+                  </apply>
+                </apply>
+                <ci> cl_r </ci>
+              </apply>
+            </apply>
+          </lambda>
+        </math>
+      </functionDefinition>
+      <functionDefinition id="mE_r_r_0" name="mE_r_r">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <lambda>
+            <bvar>
+              <ci> k_gamma_r </ci>
+            </bvar>
+            <bvar>
+              <ci> K_gamma_r </ci>
+            </bvar>
+            <bvar>
+              <ci> cl_r </ci>
+            </bvar>
+            <bvar>
+              <ci> K_F_r </ci>
+            </bvar>
+            <bvar>
+              <ci> mF_r </ci>
+            </bvar>
+            <bvar>
+              <ci> n_r </ci>
+            </bvar>
+            <bvar>
+              <ci> gamma_mE_r </ci>
+            </bvar>
+            <bvar>
+              <ci> k_N_r </ci>
+            </bvar>
+            <bvar>
+              <ci> N </ci>
+            </bvar>
+            <bvar>
+              <ci> K_ct_r </ci>
+            </bvar>
+            <bvar>
+              <ci> K_N_r </ci>
+            </bvar>
+            <bvar>
+              <ci> mE_r </ci>
+            </bvar>
+            <bvar>
+              <ci> alpha_TH_r </ci>
+            </bvar>
+            <apply>
+              <minus/>
+              <apply>
+                <minus/>
+                <apply>
+                  <times/>
+                  <ci> k_gamma_r </ci>
+                  <apply>
+                    <divide/>
+                    <ci> K_gamma_r </ci>
+                    <apply>
+                      <plus/>
+                      <apply>
+                        <power/>
+                        <ci> cl_r </ci>
+                        <cn> 4 </cn>
+                      </apply>
+                      <ci> K_gamma_r </ci>
+                    </apply>
+                  </apply>
+                  <apply>
+                    <divide/>
+                    <ci> K_F_r </ci>
+                    <apply>
+                      <plus/>
+                      <apply>
+                        <power/>
+                        <ci> mF_r </ci>
+                        <ci> n_r </ci>
+                      </apply>
+                      <ci> K_F_r </ci>
+                    </apply>
+                  </apply>
+                </apply>
+                <apply>
+                  <times/>
+                  <apply>
+                    <plus/>
+                    <ci> gamma_mE_r </ci>
+                    <apply>
+                      <times/>
+                      <ci> k_N_r </ci>
+                      <apply>
+                        <divide/>
+                        <apply>
+                          <power/>
+                          <ci> N </ci>
+                          <ci> K_ct_r </ci>
+                        </apply>
+                        <apply>
+                          <plus/>
+                          <apply>
+                            <power/>
+                            <ci> N </ci>
+                            <ci> K_ct_r </ci>
+                          </apply>
+                          <ci> K_N_r </ci>
+                        </apply>
+                      </apply>
+                      <apply>
+                        <divide/>
+                        <ci> K_F_r </ci>
+                        <apply>
+                          <plus/>
+                          <apply>
+                            <power/>
+                            <ci> mF_r </ci>
+                            <ci> n_r </ci>
+                          </apply>
+                          <ci> K_F_r </ci>
+                        </apply>
+                      </apply>
+                    </apply>
+                  </apply>
+                  <ci> mE_r </ci>
+                </apply>
+              </apply>
+              <apply>
+                <times/>
+                <ci> alpha_TH_r </ci>
+                <ci> mF_r </ci>
+                <ci> mE_r </ci>
+              </apply>
+            </apply>
+          </lambda>
+        </math>
+      </functionDefinition>
+      <functionDefinition id="Y_DD_r_r_0" name="Y_DD_r_r">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <lambda>
+            <bvar>
+              <ci> b_Y_r </ci>
+            </bvar>
+            <bvar>
+              <ci> K_F_r </ci>
+            </bvar>
+            <bvar>
+              <ci> mF_r </ci>
+            </bvar>
+            <bvar>
+              <ci> n_r </ci>
+            </bvar>
+            <bvar>
+              <ci> k_I_r </ci>
+            </bvar>
+            <bvar>
+              <ci> I_r </ci>
+            </bvar>
+            <bvar>
+              <ci> Y_DD_r </ci>
+            </bvar>
+            <bvar>
+              <ci> k_R_r </ci>
+            </bvar>
+            <bvar>
+              <ci> b_D_r </ci>
+            </bvar>
+            <bvar>
+              <ci> Y_LD_r </ci>
+            </bvar>
+            <bvar>
+              <ci> Y_DL_r </ci>
+            </bvar>
+            <bvar>
+              <ci> k_N_r </ci>
+            </bvar>
+            <bvar>
+              <ci> N </ci>
+            </bvar>
+            <bvar>
+              <ci> K_ct_r </ci>
+            </bvar>
+            <bvar>
+              <ci> K_N_r </ci>
+            </bvar>
+            <apply>
+              <minus/>
+              <apply>
+                <plus/>
+                <apply>
+                  <minus/>
+                  <apply>
+                    <times/>
+                    <ci> b_Y_r </ci>
+                    <apply>
+                      <divide/>
+                      <ci> K_F_r </ci>
+                      <apply>
+                        <plus/>
+                        <apply>
+                          <power/>
+                          <ci> mF_r </ci>
+                          <ci> n_r </ci>
+                        </apply>
+                        <ci> K_F_r </ci>
+                      </apply>
+                    </apply>
+                  </apply>
+                  <apply>
+                    <times/>
+                    <cn> 2 </cn>
+                    <ci> k_I_r </ci>
+                    <ci> I_r </ci>
+                    <ci> Y_DD_r </ci>
+                  </apply>
+                </apply>
+                <apply>
+                  <times/>
+                  <ci> k_R_r </ci>
+                  <apply>
+                    <plus/>
+                    <apply>
+                      <minus/>
+                      <cn> 1 </cn>
+                      <ci> I_r </ci>
+                    </apply>
+                    <ci> b_D_r </ci>
+                  </apply>
+                  <apply>
+                    <plus/>
+                    <ci> Y_LD_r </ci>
+                    <ci> Y_DL_r </ci>
+                  </apply>
+                </apply>
+              </apply>
+              <apply>
+                <times/>
+                <ci> k_N_r </ci>
+                <apply>
+                  <divide/>
+                  <apply>
+                    <power/>
+                    <ci> N </ci>
+                    <ci> K_ct_r </ci>
+                  </apply>
+                  <apply>
+                    <plus/>
+                    <apply>
+                      <power/>
+                      <ci> N </ci>
+                      <ci> K_ct_r </ci>
+                    </apply>
+                    <ci> K_N_r </ci>
+                  </apply>
+                </apply>
+                <apply>
+                  <divide/>
+                  <ci> K_F_r </ci>
+                  <apply>
+                    <plus/>
+                    <apply>
+                      <power/>
+                      <ci> mF_r </ci>
+                      <ci> n_r </ci>
+                    </apply>
+                    <ci> K_F_r </ci>
+                  </apply>
+                </apply>
+                <ci> Y_DD_r </ci>
+              </apply>
+            </apply>
+          </lambda>
+        </math>
+      </functionDefinition>
+      <functionDefinition id="Y_DL_r_r_0" name="Y_DL_r_r">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <lambda>
+            <bvar>
+              <ci> k_R_r </ci>
+            </bvar>
+            <bvar>
+              <ci> I_r </ci>
+            </bvar>
+            <bvar>
+              <ci> b_D_r </ci>
+            </bvar>
+            <bvar>
+              <ci> k_I_r </ci>
+            </bvar>
+            <bvar>
+              <ci> Y_DL_r </ci>
+            </bvar>
+            <bvar>
+              <ci> Y_DD_r </ci>
+            </bvar>
+            <bvar>
+              <ci> Y_LL_r </ci>
+            </bvar>
+            <bvar>
+              <ci> k_N_r </ci>
+            </bvar>
+            <bvar>
+              <ci> N </ci>
+            </bvar>
+            <bvar>
+              <ci> K_ct_r </ci>
+            </bvar>
+            <bvar>
+              <ci> K_N_r </ci>
+            </bvar>
+            <bvar>
+              <ci> K_F_r </ci>
+            </bvar>
+            <bvar>
+              <ci> mF_r </ci>
+            </bvar>
+            <bvar>
+              <ci> n_r </ci>
+            </bvar>
+            <apply>
+              <minus/>
+              <apply>
+                <plus/>
+                <apply>
+                  <times/>
+                  <apply>
+                    <minus/>
+                    <apply>
+                      <plus/>
+                      <apply>
+                        <times/>
+                        <ci> k_R_r </ci>
+                        <apply>
+                          <plus/>
+                          <apply>
+                            <minus/>
+                            <cn> 1 </cn>
+                            <ci> I_r </ci>
+                          </apply>
+                          <ci> b_D_r </ci>
+                        </apply>
+                      </apply>
+                      <apply>
+                        <times/>
+                        <ci> k_I_r </ci>
+                        <ci> I_r </ci>
+                      </apply>
+                    </apply>
+                  </apply>
+                  <ci> Y_DL_r </ci>
+                </apply>
+                <apply>
+                  <times/>
+                  <ci> k_I_r </ci>
+                  <ci> I_r </ci>
+                  <ci> Y_DD_r </ci>
+                </apply>
+                <apply>
+                  <times/>
+                  <ci> k_R_r </ci>
+                  <apply>
+                    <plus/>
+                    <apply>
+                      <minus/>
+                      <cn> 1 </cn>
+                      <ci> I_r </ci>
+                    </apply>
+                    <ci> b_D_r </ci>
+                  </apply>
+                  <ci> Y_LL_r </ci>
+                </apply>
+              </apply>
+              <apply>
+                <times/>
+                <ci> k_N_r </ci>
+                <apply>
+                  <divide/>
+                  <apply>
+                    <power/>
+                    <ci> N </ci>
+                    <ci> K_ct_r </ci>
+                  </apply>
+                  <apply>
+                    <plus/>
+                    <apply>
+                      <power/>
+                      <ci> N </ci>
+                      <ci> K_ct_r </ci>
+                    </apply>
+                    <ci> K_N_r </ci>
+                  </apply>
+                </apply>
+                <apply>
+                  <divide/>
+                  <ci> K_F_r </ci>
+                  <apply>
+                    <plus/>
+                    <apply>
+                      <power/>
+                      <ci> mF_r </ci>
+                      <ci> n_r </ci>
+                    </apply>
+                    <ci> K_F_r </ci>
+                  </apply>
+                </apply>
+                <ci> Y_DL_r </ci>
+              </apply>
+            </apply>
+          </lambda>
+        </math>
+      </functionDefinition>
+      <functionDefinition id="Y_LL_r_r_0" name="Y_LL_r_r">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <lambda>
+            <bvar>
+              <ci> k_R_r </ci>
+            </bvar>
+            <bvar>
+              <ci> I_r </ci>
+            </bvar>
+            <bvar>
+              <ci> b_D_r </ci>
+            </bvar>
+            <bvar>
+              <ci> Y_LL_r </ci>
+            </bvar>
+            <bvar>
+              <ci> k_I_r </ci>
+            </bvar>
+            <bvar>
+              <ci> Y_LD_r </ci>
+            </bvar>
+            <bvar>
+              <ci> Y_DL_r </ci>
+            </bvar>
+            <bvar>
+              <ci> k_N_r </ci>
+            </bvar>
+            <bvar>
+              <ci> N </ci>
+            </bvar>
+            <bvar>
+              <ci> K_ct_r </ci>
+            </bvar>
+            <bvar>
+              <ci> K_N_r </ci>
+            </bvar>
+            <bvar>
+              <ci> K_F_r </ci>
+            </bvar>
+            <bvar>
+              <ci> mF_r </ci>
+            </bvar>
+            <bvar>
+              <ci> n_r </ci>
+            </bvar>
+            <apply>
+              <minus/>
+              <apply>
+                <plus/>
+                <apply>
+                  <times/>
+                  <apply>
+                    <minus/>
+                    <cn> 2 </cn>
+                  </apply>
+                  <ci> k_R_r </ci>
+                  <apply>
+                    <plus/>
+                    <apply>
+                      <minus/>
+                      <cn> 1 </cn>
+                      <ci> I_r </ci>
+                    </apply>
+                    <ci> b_D_r </ci>
+                  </apply>
+                  <ci> Y_LL_r </ci>
+                </apply>
+                <apply>
+                  <times/>
+                  <ci> k_I_r </ci>
+                  <ci> I_r </ci>
+                  <apply>
+                    <plus/>
+                    <ci> Y_LD_r </ci>
+                    <ci> Y_DL_r </ci>
+                  </apply>
+                </apply>
+              </apply>
+              <apply>
+                <times/>
+                <ci> k_N_r </ci>
+                <apply>
+                  <divide/>
+                  <apply>
+                    <power/>
+                    <ci> N </ci>
+                    <ci> K_ct_r </ci>
+                  </apply>
+                  <apply>
+                    <plus/>
+                    <apply>
+                      <power/>
+                      <ci> N </ci>
+                      <ci> K_ct_r </ci>
+                    </apply>
+                    <ci> K_N_r </ci>
+                  </apply>
+                </apply>
+                <apply>
+                  <divide/>
+                  <ci> K_F_r </ci>
+                  <apply>
+                    <plus/>
+                    <apply>
+                      <power/>
+                      <ci> mF_r </ci>
+                      <ci> n_r </ci>
+                    </apply>
+                    <ci> K_F_r </ci>
+                  </apply>
+                </apply>
+                <ci> Y_LL_r </ci>
+              </apply>
+            </apply>
+          </lambda>
+        </math>
+      </functionDefinition>
+      <functionDefinition id="J_p_r_r_0" name="J_p_r_r">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <lambda>
+            <bvar>
+              <ci> k_K_r </ci>
+            </bvar>
+            <bvar>
+              <ci> Y_DD_r </ci>
+            </bvar>
+            <bvar>
+              <ci> J_r </ci>
+            </bvar>
+            <bvar>
+              <ci> k_H_r </ci>
+            </bvar>
+            <bvar>
+              <ci> J_p_r </ci>
+            </bvar>
+            <bvar>
+              <ci> k_p_r </ci>
+            </bvar>
+            <bvar>
+              <ci> Y_LD_r </ci>
+            </bvar>
+            <bvar>
+              <ci> Y_DL_r </ci>
+            </bvar>
+            <bvar>
+              <ci> Y_LL_r </ci>
+            </bvar>
+            <bvar>
+              <ci> k_N_r </ci>
+            </bvar>
+            <bvar>
+              <ci> N </ci>
+            </bvar>
+            <bvar>
+              <ci> K_ct_r </ci>
+            </bvar>
+            <bvar>
+              <ci> K_N_r </ci>
+            </bvar>
+            <bvar>
+              <ci> K_F_r </ci>
+            </bvar>
+            <bvar>
+              <ci> mF_r </ci>
+            </bvar>
+            <bvar>
+              <ci> n_r </ci>
+            </bvar>
+            <apply>
+              <minus/>
+              <apply>
+                <minus/>
+                <apply>
+                  <minus/>
+                  <apply>
+                    <times/>
+                    <ci> k_K_r </ci>
+                    <ci> Y_DD_r </ci>
+                    <ci> J_r </ci>
+                  </apply>
+                  <apply>
+                    <times/>
+                    <ci> k_H_r </ci>
+                    <ci> J_p_r </ci>
+                  </apply>
+                </apply>
+                <apply>
+                  <times/>
+                  <ci> k_p_r </ci>
+                  <apply>
+                    <plus/>
+                    <ci> Y_LD_r </ci>
+                    <ci> Y_DL_r </ci>
+                    <ci> Y_LL_r </ci>
+                  </apply>
+                  <ci> J_p_r </ci>
+                </apply>
+              </apply>
+              <apply>
+                <times/>
+                <ci> k_N_r </ci>
+                <apply>
+                  <divide/>
+                  <apply>
+                    <power/>
+                    <ci> N </ci>
+                    <ci> K_ct_r </ci>
+                  </apply>
+                  <apply>
+                    <plus/>
+                    <apply>
+                      <power/>
+                      <ci> N </ci>
+                      <ci> K_ct_r </ci>
+                    </apply>
+                    <ci> K_N_r </ci>
+                  </apply>
+                </apply>
+                <apply>
+                  <divide/>
+                  <ci> K_F_r </ci>
+                  <apply>
+                    <plus/>
+                    <apply>
+                      <power/>
+                      <ci> mF_r </ci>
+                      <ci> n_r </ci>
+                    </apply>
+                    <ci> K_F_r </ci>
+                  </apply>
+                </apply>
+                <ci> J_p_r </ci>
+              </apply>
+            </apply>
+          </lambda>
+        </math>
+      </functionDefinition>
+      <functionDefinition id="mF_r_r_0" name="mF_r_r">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <lambda>
+            <bvar>
+              <ci> k_T_r </ci>
+            </bvar>
+            <bvar>
+              <ci> J_p_r </ci>
+            </bvar>
+            <bvar>
+              <ci> K_J_r </ci>
+            </bvar>
+            <bvar>
+              <ci> K_F_r </ci>
+            </bvar>
+            <bvar>
+              <ci> mF_r </ci>
+            </bvar>
+            <bvar>
+              <ci> n_r </ci>
+            </bvar>
+            <bvar>
+              <ci> k_N_r </ci>
+            </bvar>
+            <bvar>
+              <ci> N </ci>
+            </bvar>
+            <bvar>
+              <ci> K_ct_r </ci>
+            </bvar>
+            <bvar>
+              <ci> K_N_r </ci>
+            </bvar>
+            <bvar>
+              <ci> alpha_TH_r </ci>
+            </bvar>
+            <bvar>
+              <ci> mE_r </ci>
+            </bvar>
+            <apply>
+              <minus/>
+              <apply>
+                <minus/>
+                <apply>
+                  <times/>
+                  <ci> k_T_r </ci>
+                  <apply>
+                    <divide/>
+                    <apply>
+                      <power/>
+                      <ci> J_p_r </ci>
+                      <cn> 2 </cn>
+                    </apply>
+                    <apply>
+                      <plus/>
+                      <apply>
+                        <power/>
+                        <ci> J_p_r </ci>
+                        <cn> 2 </cn>
+                      </apply>
+                      <ci> K_J_r </ci>
+                    </apply>
+                  </apply>
+                  <apply>
+                    <divide/>
+                    <ci> K_F_r </ci>
+                    <apply>
+                      <plus/>
+                      <apply>
+                        <power/>
+                        <ci> mF_r </ci>
+                        <ci> n_r </ci>
+                      </apply>
+                      <ci> K_F_r </ci>
+                    </apply>
+                  </apply>
+                </apply>
+                <apply>
+                  <times/>
+                  <ci> k_N_r </ci>
+                  <apply>
+                    <divide/>
+                    <apply>
+                      <power/>
+                      <ci> N </ci>
+                      <ci> K_ct_r </ci>
+                    </apply>
+                    <apply>
+                      <plus/>
+                      <apply>
+                        <power/>
+                        <ci> N </ci>
+                        <ci> K_ct_r </ci>
+                      </apply>
+                      <ci> K_N_r </ci>
+                    </apply>
+                  </apply>
+                  <apply>
+                    <divide/>
+                    <ci> K_F_r </ci>
+                    <apply>
+                      <plus/>
+                      <apply>
+                        <power/>
+                        <ci> mF_r </ci>
+                        <ci> n_r </ci>
+                      </apply>
+                      <ci> K_F_r </ci>
+                    </apply>
+                  </apply>
+                  <ci> mF_r </ci>
+                </apply>
+              </apply>
+              <apply>
+                <times/>
+                <cn> 2 </cn>
+                <ci> alpha_TH_r </ci>
+                <ci> mF_r </ci>
+                <ci> mE_r </ci>
+              </apply>
+            </apply>
+          </lambda>
+        </math>
+      </functionDefinition>
+      <functionDefinition id="Y_DD_n_r_0" name="Y_DD_n_r">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <lambda>
+            <bvar>
+              <ci> b_Y_n </ci>
+            </bvar>
+            <bvar>
+              <ci> K_F_n </ci>
+            </bvar>
+            <bvar>
+              <ci> mF_n </ci>
+            </bvar>
+            <bvar>
+              <ci> n_n </ci>
+            </bvar>
+            <bvar>
+              <ci> k_I_n </ci>
+            </bvar>
+            <bvar>
+              <ci> I_r </ci>
+            </bvar>
+            <bvar>
+              <ci> Y_DD_n </ci>
+            </bvar>
+            <bvar>
+              <ci> k_R_n </ci>
+            </bvar>
+            <bvar>
+              <ci> b_D_n </ci>
+            </bvar>
+            <bvar>
+              <ci> Y_LD_n </ci>
+            </bvar>
+            <bvar>
+              <ci> Y_DL_n </ci>
+            </bvar>
+            <bvar>
+              <ci> k_N_n </ci>
+            </bvar>
+            <bvar>
+              <ci> N </ci>
+            </bvar>
+            <bvar>
+              <ci> K_ct_n </ci>
+            </bvar>
+            <bvar>
+              <ci> K_N_n </ci>
+            </bvar>
+            <apply>
+              <minus/>
+              <apply>
+                <plus/>
+                <apply>
+                  <minus/>
+                  <apply>
+                    <times/>
+                    <ci> b_Y_n </ci>
+                    <apply>
+                      <divide/>
+                      <ci> K_F_n </ci>
+                      <apply>
+                        <plus/>
+                        <apply>
+                          <power/>
+                          <ci> mF_n </ci>
+                          <ci> n_n </ci>
+                        </apply>
+                        <ci> K_F_n </ci>
+                      </apply>
+                    </apply>
+                  </apply>
+                  <apply>
+                    <times/>
+                    <cn> 2 </cn>
+                    <ci> k_I_n </ci>
+                    <apply>
+                      <minus/>
+                      <cn> 1 </cn>
+                      <ci> I_r </ci>
+                    </apply>
+                    <ci> Y_DD_n </ci>
+                  </apply>
+                </apply>
+                <apply>
+                  <times/>
+                  <ci> k_R_n </ci>
+                  <apply>
+                    <plus/>
+                    <ci> I_r </ci>
+                    <ci> b_D_n </ci>
+                  </apply>
+                  <apply>
+                    <plus/>
+                    <ci> Y_LD_n </ci>
+                    <ci> Y_DL_n </ci>
+                  </apply>
+                </apply>
+              </apply>
+              <apply>
+                <times/>
+                <ci> k_N_n </ci>
+                <apply>
+                  <divide/>
+                  <apply>
+                    <power/>
+                    <ci> N </ci>
+                    <ci> K_ct_n </ci>
+                  </apply>
+                  <apply>
+                    <plus/>
+                    <apply>
+                      <power/>
+                      <ci> N </ci>
+                      <ci> K_ct_n </ci>
+                    </apply>
+                    <ci> K_N_n </ci>
+                  </apply>
+                </apply>
+                <apply>
+                  <divide/>
+                  <ci> K_F_n </ci>
+                  <apply>
+                    <plus/>
+                    <apply>
+                      <power/>
+                      <ci> mF_n </ci>
+                      <ci> n_n </ci>
+                    </apply>
+                    <ci> K_F_n </ci>
+                  </apply>
+                </apply>
+                <ci> Y_DD_n </ci>
+              </apply>
+            </apply>
+          </lambda>
+        </math>
+      </functionDefinition>
+      <functionDefinition id="Y_DL_n_r_0" name="Y_DL_n_r">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <lambda>
+            <bvar>
+              <ci> k_R_n </ci>
+            </bvar>
+            <bvar>
+              <ci> I_r </ci>
+            </bvar>
+            <bvar>
+              <ci> b_D_n </ci>
+            </bvar>
+            <bvar>
+              <ci> k_I_n </ci>
+            </bvar>
+            <bvar>
+              <ci> Y_DL_n </ci>
+            </bvar>
+            <bvar>
+              <ci> Y_DD_n </ci>
+            </bvar>
+            <bvar>
+              <ci> Y_LL_n </ci>
+            </bvar>
+            <bvar>
+              <ci> k_N_n </ci>
+            </bvar>
+            <bvar>
+              <ci> N </ci>
+            </bvar>
+            <bvar>
+              <ci> K_ct_n </ci>
+            </bvar>
+            <bvar>
+              <ci> K_N_n </ci>
+            </bvar>
+            <bvar>
+              <ci> K_F_n </ci>
+            </bvar>
+            <bvar>
+              <ci> mF_n </ci>
+            </bvar>
+            <bvar>
+              <ci> n_n </ci>
+            </bvar>
+            <apply>
+              <minus/>
+              <apply>
+                <plus/>
+                <apply>
+                  <times/>
+                  <apply>
+                    <minus/>
+                    <apply>
+                      <plus/>
+                      <apply>
+                        <times/>
+                        <ci> k_R_n </ci>
+                        <apply>
+                          <plus/>
+                          <ci> I_r </ci>
+                          <ci> b_D_n </ci>
+                        </apply>
+                      </apply>
+                      <apply>
+                        <times/>
+                        <ci> k_I_n </ci>
+                        <apply>
+                          <minus/>
+                          <cn> 1 </cn>
+                          <ci> I_r </ci>
+                        </apply>
+                      </apply>
+                    </apply>
+                  </apply>
+                  <ci> Y_DL_n </ci>
+                </apply>
+                <apply>
+                  <times/>
+                  <ci> k_I_n </ci>
+                  <apply>
+                    <minus/>
+                    <cn> 1 </cn>
+                    <ci> I_r </ci>
+                  </apply>
+                  <ci> Y_DD_n </ci>
+                </apply>
+                <apply>
+                  <times/>
+                  <ci> k_R_n </ci>
+                  <apply>
+                    <plus/>
+                    <ci> I_r </ci>
+                    <ci> b_D_n </ci>
+                  </apply>
+                  <ci> Y_LL_n </ci>
+                </apply>
+              </apply>
+              <apply>
+                <times/>
+                <ci> k_N_n </ci>
+                <apply>
+                  <divide/>
+                  <apply>
+                    <power/>
+                    <ci> N </ci>
+                    <ci> K_ct_n </ci>
+                  </apply>
+                  <apply>
+                    <plus/>
+                    <apply>
+                      <power/>
+                      <ci> N </ci>
+                      <ci> K_ct_n </ci>
+                    </apply>
+                    <ci> K_N_n </ci>
+                  </apply>
+                </apply>
+                <apply>
+                  <divide/>
+                  <ci> K_F_n </ci>
+                  <apply>
+                    <plus/>
+                    <apply>
+                      <power/>
+                      <ci> mF_n </ci>
+                      <ci> n_n </ci>
+                    </apply>
+                    <ci> K_F_n </ci>
+                  </apply>
+                </apply>
+                <ci> Y_DL_n </ci>
+              </apply>
+            </apply>
+          </lambda>
+        </math>
+      </functionDefinition>
+      <functionDefinition id="Y_LD_n_r_0" name="Y_LD_n_r">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <lambda>
+            <bvar>
+              <ci> k_R_n </ci>
+            </bvar>
+            <bvar>
+              <ci> I_r </ci>
+            </bvar>
+            <bvar>
+              <ci> b_D_n </ci>
+            </bvar>
+            <bvar>
+              <ci> k_I_n </ci>
+            </bvar>
+            <bvar>
+              <ci> Y_LD_n </ci>
+            </bvar>
+            <bvar>
+              <ci> Y_DD_n </ci>
+            </bvar>
+            <bvar>
+              <ci> Y_LL_n </ci>
+            </bvar>
+            <bvar>
+              <ci> k_N_n </ci>
+            </bvar>
+            <bvar>
+              <ci> N </ci>
+            </bvar>
+            <bvar>
+              <ci> K_ct_n </ci>
+            </bvar>
+            <bvar>
+              <ci> K_N_n </ci>
+            </bvar>
+            <bvar>
+              <ci> K_F_n </ci>
+            </bvar>
+            <bvar>
+              <ci> mF_n </ci>
+            </bvar>
+            <bvar>
+              <ci> n_n </ci>
+            </bvar>
+            <apply>
+              <minus/>
+              <apply>
+                <plus/>
+                <apply>
+                  <times/>
+                  <apply>
+                    <minus/>
+                    <apply>
+                      <plus/>
+                      <apply>
+                        <times/>
+                        <ci> k_R_n </ci>
+                        <apply>
+                          <plus/>
+                          <ci> I_r </ci>
+                          <ci> b_D_n </ci>
+                        </apply>
+                      </apply>
+                      <apply>
+                        <times/>
+                        <ci> k_I_n </ci>
+                        <apply>
+                          <minus/>
+                          <cn> 1 </cn>
+                          <ci> I_r </ci>
+                        </apply>
+                      </apply>
+                    </apply>
+                  </apply>
+                  <ci> Y_LD_n </ci>
+                </apply>
+                <apply>
+                  <times/>
+                  <ci> k_I_n </ci>
+                  <apply>
+                    <minus/>
+                    <cn> 1 </cn>
+                    <ci> I_r </ci>
+                  </apply>
+                  <ci> Y_DD_n </ci>
+                </apply>
+                <apply>
+                  <times/>
+                  <ci> k_R_n </ci>
+                  <apply>
+                    <plus/>
+                    <ci> I_r </ci>
+                    <ci> b_D_n </ci>
+                  </apply>
+                  <ci> Y_LL_n </ci>
+                </apply>
+              </apply>
+              <apply>
+                <times/>
+                <ci> k_N_n </ci>
+                <apply>
+                  <divide/>
+                  <apply>
+                    <power/>
+                    <ci> N </ci>
+                    <ci> K_ct_n </ci>
+                  </apply>
+                  <apply>
+                    <plus/>
+                    <apply>
+                      <power/>
+                      <ci> N </ci>
+                      <ci> K_ct_n </ci>
+                    </apply>
+                    <ci> K_N_n </ci>
+                  </apply>
+                </apply>
+                <apply>
+                  <divide/>
+                  <ci> K_F_n </ci>
+                  <apply>
+                    <plus/>
+                    <apply>
+                      <power/>
+                      <ci> mF_n </ci>
+                      <ci> n_n </ci>
+                    </apply>
+                    <ci> K_F_n </ci>
+                  </apply>
+                </apply>
+                <ci> Y_LD_n </ci>
+              </apply>
+            </apply>
+          </lambda>
+        </math>
+      </functionDefinition>
+      <functionDefinition id="J_n_r_0" name="J_n_r">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <lambda>
+            <bvar>
+              <ci> b_J_n </ci>
+            </bvar>
+            <bvar>
+              <ci> K_F_n </ci>
+            </bvar>
+            <bvar>
+              <ci> mF_n </ci>
+            </bvar>
+            <bvar>
+              <ci> n_n </ci>
+            </bvar>
+            <bvar>
+              <ci> k_K_n </ci>
+            </bvar>
+            <bvar>
+              <ci> Y_DD_n </ci>
+            </bvar>
+            <bvar>
+              <ci> J_n </ci>
+            </bvar>
+            <bvar>
+              <ci> k_H_n </ci>
+            </bvar>
+            <bvar>
+              <ci> J_p_n </ci>
+            </bvar>
+            <bvar>
+              <ci> k_p_n </ci>
+            </bvar>
+            <bvar>
+              <ci> Y_LD_n </ci>
+            </bvar>
+            <bvar>
+              <ci> Y_DL_n </ci>
+            </bvar>
+            <bvar>
+              <ci> Y_LL_n </ci>
+            </bvar>
+            <bvar>
+              <ci> k_N_n </ci>
+            </bvar>
+            <bvar>
+              <ci> N </ci>
+            </bvar>
+            <bvar>
+              <ci> K_ct_n </ci>
+            </bvar>
+            <bvar>
+              <ci> K_N_n </ci>
+            </bvar>
+            <apply>
+              <minus/>
+              <apply>
+                <plus/>
+                <apply>
+                  <minus/>
+                  <apply>
+                    <times/>
+                    <ci> b_J_n </ci>
+                    <apply>
+                      <divide/>
+                      <ci> K_F_n </ci>
+                      <apply>
+                        <plus/>
+                        <apply>
+                          <power/>
+                          <ci> mF_n </ci>
+                          <ci> n_n </ci>
+                        </apply>
+                        <ci> K_F_n </ci>
+                      </apply>
+                    </apply>
+                  </apply>
+                  <apply>
+                    <times/>
+                    <ci> k_K_n </ci>
+                    <ci> Y_DD_n </ci>
+                    <ci> J_n </ci>
+                  </apply>
+                </apply>
+                <apply>
+                  <times/>
+                  <ci> k_H_n </ci>
+                  <ci> J_p_n </ci>
+                </apply>
+                <apply>
+                  <times/>
+                  <ci> k_p_n </ci>
+                  <apply>
+                    <plus/>
+                    <ci> Y_LD_n </ci>
+                    <ci> Y_DL_n </ci>
+                    <ci> Y_LL_n </ci>
+                  </apply>
+                  <ci> J_p_n </ci>
+                </apply>
+              </apply>
+              <apply>
+                <times/>
+                <ci> k_N_n </ci>
+                <apply>
+                  <divide/>
+                  <apply>
+                    <power/>
+                    <ci> N </ci>
+                    <ci> K_ct_n </ci>
+                  </apply>
+                  <apply>
+                    <plus/>
+                    <apply>
+                      <power/>
+                      <ci> N </ci>
+                      <ci> K_ct_n </ci>
+                    </apply>
+                    <ci> K_N_n </ci>
+                  </apply>
+                </apply>
+                <apply>
+                  <divide/>
+                  <ci> K_F_n </ci>
+                  <apply>
+                    <plus/>
+                    <apply>
+                      <power/>
+                      <ci> mF_n </ci>
+                      <ci> n_n </ci>
+                    </apply>
+                    <ci> K_F_n </ci>
+                  </apply>
+                </apply>
+                <ci> J_n </ci>
+              </apply>
+            </apply>
+          </lambda>
+        </math>
+      </functionDefinition>
+      <functionDefinition id="BP_r_r_0" name="BP_r_r">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <lambda>
+            <bvar>
+              <ci> k_N_r </ci>
+            </bvar>
+            <bvar>
+              <ci> N </ci>
+            </bvar>
+            <bvar>
+              <ci> K_ct_r </ci>
+            </bvar>
+            <bvar>
+              <ci> K_N_r </ci>
+            </bvar>
+            <bvar>
+              <ci> K_F_r </ci>
+            </bvar>
+            <bvar>
+              <ci> mF_r </ci>
+            </bvar>
+            <bvar>
+              <ci> n_r </ci>
+            </bvar>
+            <bvar>
+              <ci> BP_r </ci>
+            </bvar>
+            <apply>
+              <times/>
+              <ci> k_N_r </ci>
+              <apply>
+                <divide/>
+                <apply>
+                  <power/>
+                  <ci> N </ci>
+                  <ci> K_ct_r </ci>
+                </apply>
+                <apply>
+                  <plus/>
+                  <apply>
+                    <power/>
+                    <ci> N </ci>
+                    <ci> K_ct_r </ci>
+                  </apply>
+                  <ci> K_N_r </ci>
+                </apply>
+              </apply>
+              <apply>
+                <divide/>
+                <ci> K_F_r </ci>
+                <apply>
+                  <plus/>
+                  <apply>
+                    <power/>
+                    <ci> mF_r </ci>
+                    <ci> n_r </ci>
+                  </apply>
+                  <ci> K_F_r </ci>
+                </apply>
+              </apply>
+              <ci> BP_r </ci>
+            </apply>
+          </lambda>
+        </math>
+      </functionDefinition>
+      <functionDefinition id="J_p_n_r_0" name="J_p_n_r">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <lambda>
+            <bvar>
+              <ci> k_K_n </ci>
+            </bvar>
+            <bvar>
+              <ci> Y_DD_n </ci>
+            </bvar>
+            <bvar>
+              <ci> J_n </ci>
+            </bvar>
+            <bvar>
+              <ci> k_H_n </ci>
+            </bvar>
+            <bvar>
+              <ci> J_p_n </ci>
+            </bvar>
+            <bvar>
+              <ci> k_p_n </ci>
+            </bvar>
+            <bvar>
+              <ci> Y_LD_n </ci>
+            </bvar>
+            <bvar>
+              <ci> Y_DL_n </ci>
+            </bvar>
+            <bvar>
+              <ci> Y_LL_n </ci>
+            </bvar>
+            <bvar>
+              <ci> k_N_n </ci>
+            </bvar>
+            <bvar>
+              <ci> N </ci>
+            </bvar>
+            <bvar>
+              <ci> K_ct_n </ci>
+            </bvar>
+            <bvar>
+              <ci> K_N_n </ci>
+            </bvar>
+            <bvar>
+              <ci> K_F_n </ci>
+            </bvar>
+            <bvar>
+              <ci> mF_n </ci>
+            </bvar>
+            <bvar>
+              <ci> n_n </ci>
+            </bvar>
+            <apply>
+              <minus/>
+              <apply>
+                <minus/>
+                <apply>
+                  <minus/>
+                  <apply>
+                    <times/>
+                    <ci> k_K_n </ci>
+                    <ci> Y_DD_n </ci>
+                    <ci> J_n </ci>
+                  </apply>
+                  <apply>
+                    <times/>
+                    <ci> k_H_n </ci>
+                    <ci> J_p_n </ci>
+                  </apply>
+                </apply>
+                <apply>
+                  <times/>
+                  <ci> k_p_n </ci>
+                  <apply>
+                    <plus/>
+                    <ci> Y_LD_n </ci>
+                    <ci> Y_DL_n </ci>
+                    <ci> Y_LL_n </ci>
+                  </apply>
+                  <ci> J_p_n </ci>
+                </apply>
+              </apply>
+              <apply>
+                <times/>
+                <ci> k_N_n </ci>
+                <apply>
+                  <divide/>
+                  <apply>
+                    <power/>
+                    <ci> N </ci>
+                    <ci> K_ct_n </ci>
+                  </apply>
+                  <apply>
+                    <plus/>
+                    <apply>
+                      <power/>
+                      <ci> N </ci>
+                      <ci> K_ct_n </ci>
+                    </apply>
+                    <ci> K_N_n </ci>
+                  </apply>
+                </apply>
+                <apply>
+                  <divide/>
+                  <ci> K_F_n </ci>
+                  <apply>
+                    <plus/>
+                    <apply>
+                      <power/>
+                      <ci> mF_n </ci>
+                      <ci> n_n </ci>
+                    </apply>
+                    <ci> K_F_n </ci>
+                  </apply>
+                </apply>
+                <ci> J_p_n </ci>
+              </apply>
+            </apply>
+          </lambda>
+        </math>
+      </functionDefinition>
+      <functionDefinition id="Y_LL_n_r_0" name="Y_LL_n_r">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <lambda>
+            <bvar>
+              <ci> k_R_n </ci>
+            </bvar>
+            <bvar>
+              <ci> I_r </ci>
+            </bvar>
+            <bvar>
+              <ci> b_D_n </ci>
+            </bvar>
+            <bvar>
+              <ci> Y_LL_n </ci>
+            </bvar>
+            <bvar>
+              <ci> k_I_n </ci>
+            </bvar>
+            <bvar>
+              <ci> Y_LD_n </ci>
+            </bvar>
+            <bvar>
+              <ci> Y_DL_n </ci>
+            </bvar>
+            <bvar>
+              <ci> k_N_n </ci>
+            </bvar>
+            <bvar>
+              <ci> N </ci>
+            </bvar>
+            <bvar>
+              <ci> K_ct_n </ci>
+            </bvar>
+            <bvar>
+              <ci> K_N_n </ci>
+            </bvar>
+            <bvar>
+              <ci> K_F_n </ci>
+            </bvar>
+            <bvar>
+              <ci> mF_n </ci>
+            </bvar>
+            <bvar>
+              <ci> n_n </ci>
+            </bvar>
+            <apply>
+              <minus/>
+              <apply>
+                <plus/>
+                <apply>
+                  <times/>
+                  <apply>
+                    <minus/>
+                    <cn> 2 </cn>
+                  </apply>
+                  <ci> k_R_n </ci>
+                  <apply>
+                    <plus/>
+                    <ci> I_r </ci>
+                    <ci> b_D_n </ci>
+                  </apply>
+                  <ci> Y_LL_n </ci>
+                </apply>
+                <apply>
+                  <times/>
+                  <ci> k_I_n </ci>
+                  <apply>
+                    <minus/>
+                    <cn> 1 </cn>
+                    <ci> I_r </ci>
+                  </apply>
+                  <apply>
+                    <plus/>
+                    <ci> Y_LD_n </ci>
+                    <ci> Y_DL_n </ci>
+                  </apply>
+                </apply>
+              </apply>
+              <apply>
+                <times/>
+                <ci> k_N_n </ci>
+                <apply>
+                  <divide/>
+                  <apply>
+                    <power/>
+                    <ci> N </ci>
+                    <ci> K_ct_n </ci>
+                  </apply>
+                  <apply>
+                    <plus/>
+                    <apply>
+                      <power/>
+                      <ci> N </ci>
+                      <ci> K_ct_n </ci>
+                    </apply>
+                    <ci> K_N_n </ci>
+                  </apply>
+                </apply>
+                <apply>
+                  <divide/>
+                  <ci> K_F_n </ci>
+                  <apply>
+                    <plus/>
+                    <apply>
+                      <power/>
+                      <ci> mF_n </ci>
+                      <ci> n_n </ci>
+                    </apply>
+                    <ci> K_F_n </ci>
+                  </apply>
+                </apply>
+                <ci> Y_LL_n </ci>
+              </apply>
+            </apply>
+          </lambda>
+        </math>
+      </functionDefinition>
+      <functionDefinition id="cl_n_r_0" name="cl_n_r">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <lambda>
+            <bvar>
+              <ci> k_T_n </ci>
+            </bvar>
+            <bvar>
+              <ci> J_p_n </ci>
+            </bvar>
+            <bvar>
+              <ci> K_J_n </ci>
+            </bvar>
+            <bvar>
+              <ci> K_F_n </ci>
+            </bvar>
+            <bvar>
+              <ci> mF_n </ci>
+            </bvar>
+            <bvar>
+              <ci> n_n </ci>
+            </bvar>
+            <bvar>
+              <ci> gamma_cl_n </ci>
+            </bvar>
+            <bvar>
+              <ci> k_N_n </ci>
+            </bvar>
+            <bvar>
+              <ci> N </ci>
+            </bvar>
+            <bvar>
+              <ci> K_ct_n </ci>
+            </bvar>
+            <bvar>
+              <ci> K_N_n </ci>
+            </bvar>
+            <bvar>
+              <ci> cl_n </ci>
+            </bvar>
+            <apply>
+              <minus/>
+              <apply>
+                <times/>
+                <ci> k_T_n </ci>
+                <apply>
+                  <divide/>
+                  <apply>
+                    <power/>
+                    <ci> J_p_n </ci>
+                    <cn> 2 </cn>
+                  </apply>
+                  <apply>
+                    <plus/>
+                    <apply>
+                      <power/>
+                      <ci> J_p_n </ci>
+                      <cn> 2 </cn>
+                    </apply>
+                    <ci> K_J_n </ci>
+                  </apply>
+                </apply>
+                <apply>
+                  <divide/>
+                  <ci> K_F_n </ci>
+                  <apply>
+                    <plus/>
+                    <apply>
+                      <power/>
+                      <ci> mF_n </ci>
+                      <ci> n_n </ci>
+                    </apply>
+                    <ci> K_F_n </ci>
+                  </apply>
+                </apply>
+              </apply>
+              <apply>
+                <times/>
+                <apply>
+                  <plus/>
+                  <ci> gamma_cl_n </ci>
+                  <apply>
+                    <times/>
+                    <ci> k_N_n </ci>
+                    <apply>
+                      <divide/>
+                      <apply>
+                        <power/>
+                        <ci> N </ci>
+                        <ci> K_ct_n </ci>
+                      </apply>
+                      <apply>
+                        <plus/>
+                        <apply>
+                          <power/>
+                          <ci> N </ci>
+                          <ci> K_ct_n </ci>
+                        </apply>
+                        <ci> K_N_n </ci>
+                      </apply>
+                    </apply>
+                    <apply>
+                      <divide/>
+                      <ci> K_F_n </ci>
+                      <apply>
+                        <plus/>
+                        <apply>
+                          <power/>
+                          <ci> mF_n </ci>
+                          <ci> n_n </ci>
+                        </apply>
+                        <ci> K_F_n </ci>
+                      </apply>
+                    </apply>
+                  </apply>
+                </apply>
+                <ci> cl_n </ci>
+              </apply>
+            </apply>
+          </lambda>
+        </math>
+      </functionDefinition>
+      <functionDefinition id="mF_b_r_0" name="mF_b_r">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <lambda>
+            <bvar>
+              <ci> k_T_b </ci>
+            </bvar>
+            <bvar>
+              <ci> J_p_b </ci>
+            </bvar>
+            <bvar>
+              <ci> K_J_b </ci>
+            </bvar>
+            <bvar>
+              <ci> K_F_b </ci>
+            </bvar>
+            <bvar>
+              <ci> mF_b </ci>
+            </bvar>
+            <bvar>
+              <ci> n_b </ci>
+            </bvar>
+            <bvar>
+              <ci> k_N_b </ci>
+            </bvar>
+            <bvar>
+              <ci> N </ci>
+            </bvar>
+            <bvar>
+              <ci> K_ct_b </ci>
+            </bvar>
+            <bvar>
+              <ci> K_N_b </ci>
+            </bvar>
+            <bvar>
+              <ci> alpha_TH_b </ci>
+            </bvar>
+            <bvar>
+              <ci> mE_b </ci>
+            </bvar>
+            <apply>
+              <minus/>
+              <apply>
+                <minus/>
+                <apply>
+                  <times/>
+                  <ci> k_T_b </ci>
+                  <apply>
+                    <divide/>
+                    <apply>
+                      <power/>
+                      <ci> J_p_b </ci>
+                      <cn> 2 </cn>
+                    </apply>
+                    <apply>
+                      <plus/>
+                      <apply>
+                        <power/>
+                        <ci> J_p_b </ci>
+                        <cn> 2 </cn>
+                      </apply>
+                      <ci> K_J_b </ci>
+                    </apply>
+                  </apply>
+                  <apply>
+                    <divide/>
+                    <ci> K_F_b </ci>
+                    <apply>
+                      <plus/>
+                      <apply>
+                        <power/>
+                        <ci> mF_b </ci>
+                        <ci> n_b </ci>
+                      </apply>
+                      <ci> K_F_b </ci>
+                    </apply>
+                  </apply>
+                </apply>
+                <apply>
+                  <times/>
+                  <ci> k_N_b </ci>
+                  <apply>
+                    <divide/>
+                    <apply>
+                      <power/>
+                      <ci> N </ci>
+                      <ci> K_ct_b </ci>
+                    </apply>
+                    <apply>
+                      <plus/>
+                      <apply>
+                        <power/>
+                        <ci> N </ci>
+                        <ci> K_ct_b </ci>
+                      </apply>
+                      <ci> K_N_b </ci>
+                    </apply>
+                  </apply>
+                  <apply>
+                    <divide/>
+                    <ci> K_F_b </ci>
+                    <apply>
+                      <plus/>
+                      <apply>
+                        <power/>
+                        <ci> mF_b </ci>
+                        <ci> n_b </ci>
+                      </apply>
+                      <ci> K_F_b </ci>
+                    </apply>
+                  </apply>
+                  <ci> mF_b </ci>
+                </apply>
+              </apply>
+              <apply>
+                <times/>
+                <cn> 2 </cn>
+                <ci> alpha_TH_b </ci>
+                <ci> mF_b </ci>
+                <ci> mE_b </ci>
+              </apply>
+            </apply>
+          </lambda>
+        </math>
+      </functionDefinition>
+      <functionDefinition id="mE_b_r_0" name="mE_b_r">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <lambda>
+            <bvar>
+              <ci> k_gamma_b </ci>
+            </bvar>
+            <bvar>
+              <ci> K_gamma_b </ci>
+            </bvar>
+            <bvar>
+              <ci> cl_b </ci>
+            </bvar>
+            <bvar>
+              <ci> K_F_b </ci>
+            </bvar>
+            <bvar>
+              <ci> mF_b </ci>
+            </bvar>
+            <bvar>
+              <ci> n_b </ci>
+            </bvar>
+            <bvar>
+              <ci> gamma_mE_b </ci>
+            </bvar>
+            <bvar>
+              <ci> k_N_b </ci>
+            </bvar>
+            <bvar>
+              <ci> N </ci>
+            </bvar>
+            <bvar>
+              <ci> K_ct_b </ci>
+            </bvar>
+            <bvar>
+              <ci> K_N_b </ci>
+            </bvar>
+            <bvar>
+              <ci> mE_b </ci>
+            </bvar>
+            <bvar>
+              <ci> alpha_TH_b </ci>
+            </bvar>
+            <apply>
+              <minus/>
+              <apply>
+                <minus/>
+                <apply>
+                  <times/>
+                  <ci> k_gamma_b </ci>
+                  <apply>
+                    <divide/>
+                    <ci> K_gamma_b </ci>
+                    <apply>
+                      <plus/>
+                      <apply>
+                        <power/>
+                        <ci> cl_b </ci>
+                        <cn> 4 </cn>
+                      </apply>
+                      <ci> K_gamma_b </ci>
+                    </apply>
+                  </apply>
+                  <apply>
+                    <divide/>
+                    <ci> K_F_b </ci>
+                    <apply>
+                      <plus/>
+                      <apply>
+                        <power/>
+                        <ci> mF_b </ci>
+                        <ci> n_b </ci>
+                      </apply>
+                      <ci> K_F_b </ci>
+                    </apply>
+                  </apply>
+                </apply>
+                <apply>
+                  <times/>
+                  <apply>
+                    <plus/>
+                    <ci> gamma_mE_b </ci>
+                    <apply>
+                      <times/>
+                      <ci> k_N_b </ci>
+                      <apply>
+                        <divide/>
+                        <apply>
+                          <power/>
+                          <ci> N </ci>
+                          <ci> K_ct_b </ci>
+                        </apply>
+                        <apply>
+                          <plus/>
+                          <apply>
+                            <power/>
+                            <ci> N </ci>
+                            <ci> K_ct_b </ci>
+                          </apply>
+                          <ci> K_N_b </ci>
+                        </apply>
+                      </apply>
+                      <apply>
+                        <divide/>
+                        <ci> K_F_b </ci>
+                        <apply>
+                          <plus/>
+                          <apply>
+                            <power/>
+                            <ci> mF_b </ci>
+                            <ci> n_b </ci>
+                          </apply>
+                          <ci> K_F_b </ci>
+                        </apply>
+                      </apply>
+                    </apply>
+                  </apply>
+                  <ci> mE_b </ci>
+                </apply>
+              </apply>
+              <apply>
+                <times/>
+                <ci> alpha_TH_b </ci>
+                <ci> mF_b </ci>
+                <ci> mE_b </ci>
+              </apply>
+            </apply>
+          </lambda>
+        </math>
+      </functionDefinition>
+      <functionDefinition id="BP_b_r_0" name="BP_b_r">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <lambda>
+            <bvar>
+              <ci> k_N_b </ci>
+            </bvar>
+            <bvar>
+              <ci> N </ci>
+            </bvar>
+            <bvar>
+              <ci> K_ct_b </ci>
+            </bvar>
+            <bvar>
+              <ci> K_N_b </ci>
+            </bvar>
+            <bvar>
+              <ci> K_F_b </ci>
+            </bvar>
+            <bvar>
+              <ci> mF_b </ci>
+            </bvar>
+            <bvar>
+              <ci> n_b </ci>
+            </bvar>
+            <bvar>
+              <ci> BP_b </ci>
+            </bvar>
+            <apply>
+              <times/>
+              <ci> k_N_b </ci>
+              <apply>
+                <divide/>
+                <apply>
+                  <power/>
+                  <ci> N </ci>
+                  <ci> K_ct_b </ci>
+                </apply>
+                <apply>
+                  <plus/>
+                  <apply>
+                    <power/>
+                    <ci> N </ci>
+                    <ci> K_ct_b </ci>
+                  </apply>
+                  <ci> K_N_b </ci>
+                </apply>
+              </apply>
+              <apply>
+                <divide/>
+                <ci> K_F_b </ci>
+                <apply>
+                  <plus/>
+                  <apply>
+                    <power/>
+                    <ci> mF_b </ci>
+                    <ci> n_b </ci>
+                  </apply>
+                  <ci> K_F_b </ci>
+                </apply>
+              </apply>
+              <ci> BP_b </ci>
+            </apply>
+          </lambda>
+        </math>
+      </functionDefinition>
+      <functionDefinition id="Y_LD_b_r_0" name="Y_LD_b_r">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <lambda>
+            <bvar>
+              <ci> k_R_b </ci>
+            </bvar>
+            <bvar>
+              <ci> k_I_b </ci>
+            </bvar>
+            <bvar>
+              <ci> I_b </ci>
+            </bvar>
+            <bvar>
+              <ci> Y_LD_b </ci>
+            </bvar>
+            <bvar>
+              <ci> Y_DD_b </ci>
+            </bvar>
+            <bvar>
+              <ci> Y_LL_b </ci>
+            </bvar>
+            <bvar>
+              <ci> k_N_b </ci>
+            </bvar>
+            <bvar>
+              <ci> N </ci>
+            </bvar>
+            <bvar>
+              <ci> K_ct_b </ci>
+            </bvar>
+            <bvar>
+              <ci> K_N_b </ci>
+            </bvar>
+            <bvar>
+              <ci> K_F_b </ci>
+            </bvar>
+            <bvar>
+              <ci> mF_b </ci>
+            </bvar>
+            <bvar>
+              <ci> n_b </ci>
+            </bvar>
+            <apply>
+              <minus/>
+              <apply>
+                <plus/>
+                <apply>
+                  <times/>
+                  <apply>
+                    <minus/>
+                    <apply>
+                      <plus/>
+                      <ci> k_R_b </ci>
+                      <apply>
+                        <times/>
+                        <ci> k_I_b </ci>
+                        <ci> I_b </ci>
+                      </apply>
+                    </apply>
+                  </apply>
+                  <ci> Y_LD_b </ci>
+                </apply>
+                <apply>
+                  <times/>
+                  <ci> k_I_b </ci>
+                  <ci> I_b </ci>
+                  <ci> Y_DD_b </ci>
+                </apply>
+                <apply>
+                  <times/>
+                  <ci> k_R_b </ci>
+                  <ci> Y_LL_b </ci>
+                </apply>
+              </apply>
+              <apply>
+                <times/>
+                <ci> k_N_b </ci>
+                <apply>
+                  <divide/>
+                  <apply>
+                    <power/>
+                    <ci> N </ci>
+                    <ci> K_ct_b </ci>
+                  </apply>
+                  <apply>
+                    <plus/>
+                    <apply>
+                      <power/>
+                      <ci> N </ci>
+                      <ci> K_ct_b </ci>
+                    </apply>
+                    <ci> K_N_b </ci>
+                  </apply>
+                </apply>
+                <apply>
+                  <divide/>
+                  <ci> K_F_b </ci>
+                  <apply>
+                    <plus/>
+                    <apply>
+                      <power/>
+                      <ci> mF_b </ci>
+                      <ci> n_b </ci>
+                    </apply>
+                    <ci> K_F_b </ci>
+                  </apply>
+                </apply>
+                <ci> Y_LD_b </ci>
+              </apply>
+            </apply>
+          </lambda>
+        </math>
+      </functionDefinition>
+      <functionDefinition id="mF_n_r_0" name="mF_n_r">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <lambda>
+            <bvar>
+              <ci> k_T_n </ci>
+            </bvar>
+            <bvar>
+              <ci> J_p_n </ci>
+            </bvar>
+            <bvar>
+              <ci> K_J_n </ci>
+            </bvar>
+            <bvar>
+              <ci> K_F_n </ci>
+            </bvar>
+            <bvar>
+              <ci> mF_n </ci>
+            </bvar>
+            <bvar>
+              <ci> n_n </ci>
+            </bvar>
+            <bvar>
+              <ci> k_N_n </ci>
+            </bvar>
+            <bvar>
+              <ci> N </ci>
+            </bvar>
+            <bvar>
+              <ci> K_ct_n </ci>
+            </bvar>
+            <bvar>
+              <ci> K_N_n </ci>
+            </bvar>
+            <bvar>
+              <ci> alpha_TH_n </ci>
+            </bvar>
+            <bvar>
+              <ci> mE_n </ci>
+            </bvar>
+            <apply>
+              <minus/>
+              <apply>
+                <minus/>
+                <apply>
+                  <times/>
+                  <ci> k_T_n </ci>
+                  <apply>
+                    <divide/>
+                    <apply>
+                      <power/>
+                      <ci> J_p_n </ci>
+                      <cn> 2 </cn>
+                    </apply>
+                    <apply>
+                      <plus/>
+                      <apply>
+                        <power/>
+                        <ci> J_p_n </ci>
+                        <cn> 2 </cn>
+                      </apply>
+                      <ci> K_J_n </ci>
+                    </apply>
+                  </apply>
+                  <apply>
+                    <divide/>
+                    <ci> K_F_n </ci>
+                    <apply>
+                      <plus/>
+                      <apply>
+                        <power/>
+                        <ci> mF_n </ci>
+                        <ci> n_n </ci>
+                      </apply>
+                      <ci> K_F_n </ci>
+                    </apply>
+                  </apply>
+                </apply>
+                <apply>
+                  <times/>
+                  <ci> k_N_n </ci>
+                  <apply>
+                    <divide/>
+                    <apply>
+                      <power/>
+                      <ci> N </ci>
+                      <ci> K_ct_n </ci>
+                    </apply>
+                    <apply>
+                      <plus/>
+                      <apply>
+                        <power/>
+                        <ci> N </ci>
+                        <ci> K_ct_n </ci>
+                      </apply>
+                      <ci> K_N_n </ci>
+                    </apply>
+                  </apply>
+                  <apply>
+                    <divide/>
+                    <ci> K_F_n </ci>
+                    <apply>
+                      <plus/>
+                      <apply>
+                        <power/>
+                        <ci> mF_n </ci>
+                        <ci> n_n </ci>
+                      </apply>
+                      <ci> K_F_n </ci>
+                    </apply>
+                  </apply>
+                  <ci> mF_n </ci>
+                </apply>
+              </apply>
+              <apply>
+                <times/>
+                <cn> 2 </cn>
+                <ci> alpha_TH_n </ci>
+                <ci> mF_n </ci>
+                <ci> mE_n </ci>
+              </apply>
+            </apply>
+          </lambda>
+        </math>
+      </functionDefinition>
+      <functionDefinition id="Y_LL_b_r_0" name="Y_LL_b_r">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <lambda>
+            <bvar>
+              <ci> k_R_b </ci>
+            </bvar>
+            <bvar>
+              <ci> Y_LL_b </ci>
+            </bvar>
+            <bvar>
+              <ci> k_I_b </ci>
+            </bvar>
+            <bvar>
+              <ci> I_b </ci>
+            </bvar>
+            <bvar>
+              <ci> Y_LD_b </ci>
+            </bvar>
+            <bvar>
+              <ci> Y_DL_b </ci>
+            </bvar>
+            <bvar>
+              <ci> k_N_b </ci>
+            </bvar>
+            <bvar>
+              <ci> N </ci>
+            </bvar>
+            <bvar>
+              <ci> K_ct_b </ci>
+            </bvar>
+            <bvar>
+              <ci> K_N_b </ci>
+            </bvar>
+            <bvar>
+              <ci> K_F_b </ci>
+            </bvar>
+            <bvar>
+              <ci> mF_b </ci>
+            </bvar>
+            <bvar>
+              <ci> n_b </ci>
+            </bvar>
+            <apply>
+              <minus/>
+              <apply>
+                <plus/>
+                <apply>
+                  <times/>
+                  <apply>
+                    <minus/>
+                    <cn> 2 </cn>
+                  </apply>
+                  <ci> k_R_b </ci>
+                  <ci> Y_LL_b </ci>
+                </apply>
+                <apply>
+                  <times/>
+                  <ci> k_I_b </ci>
+                  <ci> I_b </ci>
+                  <apply>
+                    <plus/>
+                    <ci> Y_LD_b </ci>
+                    <ci> Y_DL_b </ci>
+                  </apply>
+                </apply>
+              </apply>
+              <apply>
+                <times/>
+                <ci> k_N_b </ci>
+                <apply>
+                  <divide/>
+                  <apply>
+                    <power/>
+                    <ci> N </ci>
+                    <ci> K_ct_b </ci>
+                  </apply>
+                  <apply>
+                    <plus/>
+                    <apply>
+                      <power/>
+                      <ci> N </ci>
+                      <ci> K_ct_b </ci>
+                    </apply>
+                    <ci> K_N_b </ci>
+                  </apply>
+                </apply>
+                <apply>
+                  <divide/>
+                  <ci> K_F_b </ci>
+                  <apply>
+                    <plus/>
+                    <apply>
+                      <power/>
+                      <ci> mF_b </ci>
+                      <ci> n_b </ci>
+                    </apply>
+                    <ci> K_F_b </ci>
+                  </apply>
+                </apply>
+                <ci> Y_LL_b </ci>
+              </apply>
+            </apply>
+          </lambda>
+        </math>
+      </functionDefinition>
+      <functionDefinition id="mE_n_r_0" name="mE_n_r">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <lambda>
+            <bvar>
+              <ci> k_gamma_n </ci>
+            </bvar>
+            <bvar>
+              <ci> K_gamma_n </ci>
+            </bvar>
+            <bvar>
+              <ci> cl_n </ci>
+            </bvar>
+            <bvar>
+              <ci> K_F_n </ci>
+            </bvar>
+            <bvar>
+              <ci> mF_n </ci>
+            </bvar>
+            <bvar>
+              <ci> n_n </ci>
+            </bvar>
+            <bvar>
+              <ci> gamma_mE_n </ci>
+            </bvar>
+            <bvar>
+              <ci> k_N_n </ci>
+            </bvar>
+            <bvar>
+              <ci> N </ci>
+            </bvar>
+            <bvar>
+              <ci> K_ct_n </ci>
+            </bvar>
+            <bvar>
+              <ci> K_N_n </ci>
+            </bvar>
+            <bvar>
+              <ci> mE_n </ci>
+            </bvar>
+            <bvar>
+              <ci> alpha_TH_n </ci>
+            </bvar>
+            <apply>
+              <minus/>
+              <apply>
+                <minus/>
+                <apply>
+                  <times/>
+                  <ci> k_gamma_n </ci>
+                  <apply>
+                    <divide/>
+                    <ci> K_gamma_n </ci>
+                    <apply>
+                      <plus/>
+                      <apply>
+                        <power/>
+                        <ci> cl_n </ci>
+                        <cn> 4 </cn>
+                      </apply>
+                      <ci> K_gamma_n </ci>
+                    </apply>
+                  </apply>
+                  <apply>
+                    <divide/>
+                    <ci> K_F_n </ci>
+                    <apply>
+                      <plus/>
+                      <apply>
+                        <power/>
+                        <ci> mF_n </ci>
+                        <ci> n_n </ci>
+                      </apply>
+                      <ci> K_F_n </ci>
+                    </apply>
+                  </apply>
+                </apply>
+                <apply>
+                  <times/>
+                  <apply>
+                    <plus/>
+                    <ci> gamma_mE_n </ci>
+                    <apply>
+                      <times/>
+                      <ci> k_N_n </ci>
+                      <apply>
+                        <divide/>
+                        <apply>
+                          <power/>
+                          <ci> N </ci>
+                          <ci> K_ct_n </ci>
+                        </apply>
+                        <apply>
+                          <plus/>
+                          <apply>
+                            <power/>
+                            <ci> N </ci>
+                            <ci> K_ct_n </ci>
+                          </apply>
+                          <ci> K_N_n </ci>
+                        </apply>
+                      </apply>
+                      <apply>
+                        <divide/>
+                        <ci> K_F_n </ci>
+                        <apply>
+                          <plus/>
+                          <apply>
+                            <power/>
+                            <ci> mF_n </ci>
+                            <ci> n_n </ci>
+                          </apply>
+                          <ci> K_F_n </ci>
+                        </apply>
+                      </apply>
+                    </apply>
+                  </apply>
+                  <ci> mE_n </ci>
+                </apply>
+              </apply>
+              <apply>
+                <times/>
+                <ci> alpha_TH_n </ci>
+                <ci> mF_n </ci>
+                <ci> mE_n </ci>
+              </apply>
+            </apply>
+          </lambda>
+        </math>
+      </functionDefinition>
+      <functionDefinition id="BP_n_r_0" name="BP_n_r">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <lambda>
+            <bvar>
+              <ci> k_N_n </ci>
+            </bvar>
+            <bvar>
+              <ci> N </ci>
+            </bvar>
+            <bvar>
+              <ci> K_ct_n </ci>
+            </bvar>
+            <bvar>
+              <ci> K_N_n </ci>
+            </bvar>
+            <bvar>
+              <ci> K_F_n </ci>
+            </bvar>
+            <bvar>
+              <ci> mF_n </ci>
+            </bvar>
+            <bvar>
+              <ci> n_n </ci>
+            </bvar>
+            <bvar>
+              <ci> BP_n </ci>
+            </bvar>
+            <apply>
+              <times/>
+              <ci> k_N_n </ci>
+              <apply>
+                <divide/>
+                <apply>
+                  <power/>
+                  <ci> N </ci>
+                  <ci> K_ct_n </ci>
+                </apply>
+                <apply>
+                  <plus/>
+                  <apply>
+                    <power/>
+                    <ci> N </ci>
+                    <ci> K_ct_n </ci>
+                  </apply>
+                  <ci> K_N_n </ci>
+                </apply>
+              </apply>
+              <apply>
+                <divide/>
+                <ci> K_F_n </ci>
+                <apply>
+                  <plus/>
+                  <apply>
+                    <power/>
+                    <ci> mF_n </ci>
+                    <ci> n_n </ci>
+                  </apply>
+                  <ci> K_F_n </ci>
+                </apply>
+              </apply>
+              <ci> BP_n </ci>
+            </apply>
+          </lambda>
+        </math>
+      </functionDefinition>
+      <functionDefinition id="Y_DD_b_r_0" name="Y_DD_b_r">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <lambda>
+            <bvar>
+              <ci> b_Y_b </ci>
+            </bvar>
+            <bvar>
+              <ci> K_F_b </ci>
+            </bvar>
+            <bvar>
+              <ci> mF_b </ci>
+            </bvar>
+            <bvar>
+              <ci> n_b </ci>
+            </bvar>
+            <bvar>
+              <ci> k_I_b </ci>
+            </bvar>
+            <bvar>
+              <ci> I_b </ci>
+            </bvar>
+            <bvar>
+              <ci> Y_DD_b </ci>
+            </bvar>
+            <bvar>
+              <ci> k_R_b </ci>
+            </bvar>
+            <bvar>
+              <ci> Y_LD_b </ci>
+            </bvar>
+            <bvar>
+              <ci> Y_DL_b </ci>
+            </bvar>
+            <bvar>
+              <ci> k_N_b </ci>
+            </bvar>
+            <bvar>
+              <ci> N </ci>
+            </bvar>
+            <bvar>
+              <ci> K_ct_b </ci>
+            </bvar>
+            <bvar>
+              <ci> K_N_b </ci>
+            </bvar>
+            <apply>
+              <minus/>
+              <apply>
+                <plus/>
+                <apply>
+                  <minus/>
+                  <apply>
+                    <times/>
+                    <ci> b_Y_b </ci>
+                    <apply>
+                      <divide/>
+                      <ci> K_F_b </ci>
+                      <apply>
+                        <plus/>
+                        <apply>
+                          <power/>
+                          <ci> mF_b </ci>
+                          <ci> n_b </ci>
+                        </apply>
+                        <ci> K_F_b </ci>
+                      </apply>
+                    </apply>
+                  </apply>
+                  <apply>
+                    <times/>
+                    <cn> 2 </cn>
+                    <ci> k_I_b </ci>
+                    <ci> I_b </ci>
+                    <ci> Y_DD_b </ci>
+                  </apply>
+                </apply>
+                <apply>
+                  <times/>
+                  <ci> k_R_b </ci>
+                  <apply>
+                    <plus/>
+                    <ci> Y_LD_b </ci>
+                    <ci> Y_DL_b </ci>
+                  </apply>
+                </apply>
+              </apply>
+              <apply>
+                <times/>
+                <ci> k_N_b </ci>
+                <apply>
+                  <divide/>
+                  <apply>
+                    <power/>
+                    <ci> N </ci>
+                    <ci> K_ct_b </ci>
+                  </apply>
+                  <apply>
+                    <plus/>
+                    <apply>
+                      <power/>
+                      <ci> N </ci>
+                      <ci> K_ct_b </ci>
+                    </apply>
+                    <ci> K_N_b </ci>
+                  </apply>
+                </apply>
+                <apply>
+                  <divide/>
+                  <ci> K_F_b </ci>
+                  <apply>
+                    <plus/>
+                    <apply>
+                      <power/>
+                      <ci> mF_b </ci>
+                      <ci> n_b </ci>
+                    </apply>
+                    <ci> K_F_b </ci>
+                  </apply>
+                </apply>
+                <ci> Y_DD_b </ci>
+              </apply>
+            </apply>
+          </lambda>
+        </math>
+      </functionDefinition>
+      <functionDefinition id="Y_DL_b_r_0" name="Y_DL_b_r">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <lambda>
+            <bvar>
+              <ci> k_R_b </ci>
+            </bvar>
+            <bvar>
+              <ci> k_I_b </ci>
+            </bvar>
+            <bvar>
+              <ci> I_b </ci>
+            </bvar>
+            <bvar>
+              <ci> Y_DL_b </ci>
+            </bvar>
+            <bvar>
+              <ci> Y_DD_b </ci>
+            </bvar>
+            <bvar>
+              <ci> Y_LL_b </ci>
+            </bvar>
+            <bvar>
+              <ci> k_N_b </ci>
+            </bvar>
+            <bvar>
+              <ci> N </ci>
+            </bvar>
+            <bvar>
+              <ci> K_ct_b </ci>
+            </bvar>
+            <bvar>
+              <ci> K_N_b </ci>
+            </bvar>
+            <bvar>
+              <ci> K_F_b </ci>
+            </bvar>
+            <bvar>
+              <ci> mF_b </ci>
+            </bvar>
+            <bvar>
+              <ci> n_b </ci>
+            </bvar>
+            <apply>
+              <minus/>
+              <apply>
+                <plus/>
+                <apply>
+                  <times/>
+                  <apply>
+                    <minus/>
+                    <apply>
+                      <plus/>
+                      <ci> k_R_b </ci>
+                      <apply>
+                        <times/>
+                        <ci> k_I_b </ci>
+                        <ci> I_b </ci>
+                      </apply>
+                    </apply>
+                  </apply>
+                  <ci> Y_DL_b </ci>
+                </apply>
+                <apply>
+                  <times/>
+                  <ci> k_I_b </ci>
+                  <ci> I_b </ci>
+                  <ci> Y_DD_b </ci>
+                </apply>
+                <apply>
+                  <times/>
+                  <ci> k_R_b </ci>
+                  <ci> Y_LL_b </ci>
+                </apply>
+              </apply>
+              <apply>
+                <times/>
+                <ci> k_N_b </ci>
+                <apply>
+                  <divide/>
+                  <apply>
+                    <power/>
+                    <ci> N </ci>
+                    <ci> K_ct_b </ci>
+                  </apply>
+                  <apply>
+                    <plus/>
+                    <apply>
+                      <power/>
+                      <ci> N </ci>
+                      <ci> K_ct_b </ci>
+                    </apply>
+                    <ci> K_N_b </ci>
+                  </apply>
+                </apply>
+                <apply>
+                  <divide/>
+                  <ci> K_F_b </ci>
+                  <apply>
+                    <plus/>
+                    <apply>
+                      <power/>
+                      <ci> mF_b </ci>
+                      <ci> n_b </ci>
+                    </apply>
+                    <ci> K_F_b </ci>
+                  </apply>
+                </apply>
+                <ci> Y_DL_b </ci>
+              </apply>
+            </apply>
+          </lambda>
+        </math>
+      </functionDefinition>
+      <functionDefinition id="J_b_r_0" name="J_b_r">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <lambda>
+            <bvar>
+              <ci> b_J_b </ci>
+            </bvar>
+            <bvar>
+              <ci> K_F_b </ci>
+            </bvar>
+            <bvar>
+              <ci> mF_b </ci>
+            </bvar>
+            <bvar>
+              <ci> n_b </ci>
+            </bvar>
+            <bvar>
+              <ci> k_K_b </ci>
+            </bvar>
+            <bvar>
+              <ci> Y_DD_b </ci>
+            </bvar>
+            <bvar>
+              <ci> J_b </ci>
+            </bvar>
+            <bvar>
+              <ci> k_H_b </ci>
+            </bvar>
+            <bvar>
+              <ci> J_p_b </ci>
+            </bvar>
+            <bvar>
+              <ci> k_p_b </ci>
+            </bvar>
+            <bvar>
+              <ci> Y_LD_b </ci>
+            </bvar>
+            <bvar>
+              <ci> Y_DL_b </ci>
+            </bvar>
+            <bvar>
+              <ci> Y_LL_b </ci>
+            </bvar>
+            <bvar>
+              <ci> k_N_b </ci>
+            </bvar>
+            <bvar>
+              <ci> N </ci>
+            </bvar>
+            <bvar>
+              <ci> K_ct_b </ci>
+            </bvar>
+            <bvar>
+              <ci> K_N_b </ci>
+            </bvar>
+            <apply>
+              <minus/>
+              <apply>
+                <plus/>
+                <apply>
+                  <minus/>
+                  <apply>
+                    <times/>
+                    <ci> b_J_b </ci>
+                    <apply>
+                      <divide/>
+                      <ci> K_F_b </ci>
+                      <apply>
+                        <plus/>
+                        <apply>
+                          <power/>
+                          <ci> mF_b </ci>
+                          <ci> n_b </ci>
+                        </apply>
+                        <ci> K_F_b </ci>
+                      </apply>
+                    </apply>
+                  </apply>
+                  <apply>
+                    <times/>
+                    <ci> k_K_b </ci>
+                    <ci> Y_DD_b </ci>
+                    <ci> J_b </ci>
+                  </apply>
+                </apply>
+                <apply>
+                  <times/>
+                  <ci> k_H_b </ci>
+                  <ci> J_p_b </ci>
+                </apply>
+                <apply>
+                  <times/>
+                  <ci> k_p_b </ci>
+                  <apply>
+                    <plus/>
+                    <ci> Y_LD_b </ci>
+                    <ci> Y_DL_b </ci>
+                    <ci> Y_LL_b </ci>
+                  </apply>
+                  <ci> J_p_b </ci>
+                </apply>
+              </apply>
+              <apply>
+                <times/>
+                <ci> k_N_b </ci>
+                <apply>
+                  <divide/>
+                  <apply>
+                    <power/>
+                    <ci> N </ci>
+                    <ci> K_ct_b </ci>
+                  </apply>
+                  <apply>
+                    <plus/>
+                    <apply>
+                      <power/>
+                      <ci> N </ci>
+                      <ci> K_ct_b </ci>
+                    </apply>
+                    <ci> K_N_b </ci>
+                  </apply>
+                </apply>
+                <apply>
+                  <divide/>
+                  <ci> K_F_b </ci>
+                  <apply>
+                    <plus/>
+                    <apply>
+                      <power/>
+                      <ci> mF_b </ci>
+                      <ci> n_b </ci>
+                    </apply>
+                    <ci> K_F_b </ci>
+                  </apply>
+                </apply>
+                <ci> J_b </ci>
+              </apply>
+            </apply>
+          </lambda>
+        </math>
+      </functionDefinition>
+      <functionDefinition id="J_p_b_r_0" name="J_p_b_r">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <lambda>
+            <bvar>
+              <ci> k_K_b </ci>
+            </bvar>
+            <bvar>
+              <ci> Y_DD_b </ci>
+            </bvar>
+            <bvar>
+              <ci> J_b </ci>
+            </bvar>
+            <bvar>
+              <ci> k_H_b </ci>
+            </bvar>
+            <bvar>
+              <ci> J_p_b </ci>
+            </bvar>
+            <bvar>
+              <ci> k_p_b </ci>
+            </bvar>
+            <bvar>
+              <ci> Y_LD_b </ci>
+            </bvar>
+            <bvar>
+              <ci> Y_DL_b </ci>
+            </bvar>
+            <bvar>
+              <ci> Y_LL_b </ci>
+            </bvar>
+            <bvar>
+              <ci> k_N_b </ci>
+            </bvar>
+            <bvar>
+              <ci> N </ci>
+            </bvar>
+            <bvar>
+              <ci> K_ct_b </ci>
+            </bvar>
+            <bvar>
+              <ci> K_N_b </ci>
+            </bvar>
+            <bvar>
+              <ci> K_F_b </ci>
+            </bvar>
+            <bvar>
+              <ci> mF_b </ci>
+            </bvar>
+            <bvar>
+              <ci> n_b </ci>
+            </bvar>
+            <apply>
+              <minus/>
+              <apply>
+                <minus/>
+                <apply>
+                  <minus/>
+                  <apply>
+                    <times/>
+                    <ci> k_K_b </ci>
+                    <ci> Y_DD_b </ci>
+                    <ci> J_b </ci>
+                  </apply>
+                  <apply>
+                    <times/>
+                    <ci> k_H_b </ci>
+                    <ci> J_p_b </ci>
+                  </apply>
+                </apply>
+                <apply>
+                  <times/>
+                  <ci> k_p_b </ci>
+                  <apply>
+                    <plus/>
+                    <ci> Y_LD_b </ci>
+                    <ci> Y_DL_b </ci>
+                    <ci> Y_LL_b </ci>
+                  </apply>
+                  <ci> J_p_b </ci>
+                </apply>
+              </apply>
+              <apply>
+                <times/>
+                <ci> k_N_b </ci>
+                <apply>
+                  <divide/>
+                  <apply>
+                    <power/>
+                    <ci> N </ci>
+                    <ci> K_ct_b </ci>
+                  </apply>
+                  <apply>
+                    <plus/>
+                    <apply>
+                      <power/>
+                      <ci> N </ci>
+                      <ci> K_ct_b </ci>
+                    </apply>
+                    <ci> K_N_b </ci>
+                  </apply>
+                </apply>
+                <apply>
+                  <divide/>
+                  <ci> K_F_b </ci>
+                  <apply>
+                    <plus/>
+                    <apply>
+                      <power/>
+                      <ci> mF_b </ci>
+                      <ci> n_b </ci>
+                    </apply>
+                    <ci> K_F_b </ci>
+                  </apply>
+                </apply>
+                <ci> J_p_b </ci>
+              </apply>
+            </apply>
+          </lambda>
+        </math>
+      </functionDefinition>
+      <functionDefinition id="cl_b_r_0" name="cl_b_r">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <lambda>
+            <bvar>
+              <ci> k_T_b </ci>
+            </bvar>
+            <bvar>
+              <ci> J_p_b </ci>
+            </bvar>
+            <bvar>
+              <ci> K_J_b </ci>
+            </bvar>
+            <bvar>
+              <ci> K_F_b </ci>
+            </bvar>
+            <bvar>
+              <ci> mF_b </ci>
+            </bvar>
+            <bvar>
+              <ci> n_b </ci>
+            </bvar>
+            <bvar>
+              <ci> gamma_cl_b </ci>
+            </bvar>
+            <bvar>
+              <ci> k_N_b </ci>
+            </bvar>
+            <bvar>
+              <ci> N </ci>
+            </bvar>
+            <bvar>
+              <ci> K_ct_b </ci>
+            </bvar>
+            <bvar>
+              <ci> K_N_b </ci>
+            </bvar>
+            <bvar>
+              <ci> cl_b </ci>
+            </bvar>
+            <apply>
+              <minus/>
+              <apply>
+                <times/>
+                <ci> k_T_b </ci>
+                <apply>
+                  <divide/>
+                  <apply>
+                    <power/>
+                    <ci> J_p_b </ci>
+                    <cn> 2 </cn>
+                  </apply>
+                  <apply>
+                    <plus/>
+                    <apply>
+                      <power/>
+                      <ci> J_p_b </ci>
+                      <cn> 2 </cn>
+                    </apply>
+                    <ci> K_J_b </ci>
+                  </apply>
+                </apply>
+                <apply>
+                  <divide/>
+                  <ci> K_F_b </ci>
+                  <apply>
+                    <plus/>
+                    <apply>
+                      <power/>
+                      <ci> mF_b </ci>
+                      <ci> n_b </ci>
+                    </apply>
+                    <ci> K_F_b </ci>
+                  </apply>
+                </apply>
+              </apply>
+              <apply>
+                <times/>
+                <apply>
+                  <plus/>
+                  <ci> gamma_cl_b </ci>
+                  <apply>
+                    <times/>
+                    <ci> k_N_b </ci>
+                    <apply>
+                      <divide/>
+                      <apply>
+                        <power/>
+                        <ci> N </ci>
+                        <ci> K_ct_b </ci>
+                      </apply>
+                      <apply>
+                        <plus/>
+                        <apply>
+                          <power/>
+                          <ci> N </ci>
+                          <ci> K_ct_b </ci>
+                        </apply>
+                        <ci> K_N_b </ci>
+                      </apply>
+                    </apply>
+                    <apply>
+                      <divide/>
+                      <ci> K_F_b </ci>
+                      <apply>
+                        <plus/>
+                        <apply>
+                          <power/>
+                          <ci> mF_b </ci>
+                          <ci> n_b </ci>
+                        </apply>
+                        <ci> K_F_b </ci>
+                      </apply>
+                    </apply>
+                  </apply>
+                </apply>
+                <ci> cl_b </ci>
+              </apply>
+            </apply>
+          </lambda>
+        </math>
+      </functionDefinition>
+    </listOfFunctionDefinitions>
+    <listOfUnitDefinitions>
+      <unitDefinition id="length" name="length">
+        <listOfUnits>
+          <unit kind="metre" exponent="1" scale="0" multiplier="1"/>
+        </listOfUnits>
+      </unitDefinition>
+      <unitDefinition id="area" name="area">
+        <listOfUnits>
+          <unit kind="metre" exponent="2" scale="0" multiplier="1"/>
+        </listOfUnits>
+      </unitDefinition>
+      <unitDefinition id="volume" name="volume">
+        <listOfUnits>
+          <unit kind="litre" exponent="1" scale="0" multiplier="1"/>
+        </listOfUnits>
+      </unitDefinition>
+      <unitDefinition id="time" name="time">
+        <listOfUnits>
+          <unit kind="second" exponent="1" scale="0" multiplier="1"/>
+        </listOfUnits>
+      </unitDefinition>
+      <unitDefinition id="substance" name="substance">
+        <listOfUnits>
+          <unit kind="mole" exponent="1" scale="0" multiplier="1"/>
+        </listOfUnits>
+      </unitDefinition>
+    </listOfUnitDefinitions>
+    <listOfCompartments>
+      <compartment id="compartment" name="compartment" spatialDimensions="3" size="1" constant="true"/>
+    </listOfCompartments>
+    <listOfSpecies>
+      <species id="Y_DD_r" name="Y_DD_r" compartment="compartment" initialConcentration="1.36921625735459e-06" boundaryCondition="false" constant="false"/>
+      <species id="Y_LD_r" name="Y_LD_r" compartment="compartment" initialConcentration="0.00288411025563418" boundaryCondition="false" constant="false"/>
+      <species id="Y_DL_r" name="Y_DL_r" compartment="compartment" initialConcentration="4.47700726658561e-05" boundaryCondition="false" constant="false"/>
+      <species id="Y_LL_r" name="Y_LL_r" compartment="compartment" initialConcentration="0.00399042641408409" boundaryCondition="false" constant="false"/>
+      <species id="J_r" name="J_r" compartment="compartment" initialConcentration="0.0152866585833984" boundaryCondition="false" constant="false"/>
+      <species id="J_p_r" name="J_p_r" compartment="compartment" initialConcentration="2.472927278528e-05" boundaryCondition="false" constant="false"/>
+      <species id="cl_r" name="cl_r" compartment="compartment" initialConcentration="6.91299063843788e-07" boundaryCondition="false" constant="false"/>
+      <species id="mF_r" name="mF_r" compartment="compartment" initialConcentration="1.10016763285552e-06" boundaryCondition="false" constant="false"/>
+      <species id="mE_r" name="mE_r" compartment="compartment" initialConcentration="0.010065819660384" boundaryCondition="false" constant="false"/>
+      <species id="Y_DD_n" name="Y_DD_n" compartment="compartment" initialConcentration="0.000145518548048555" boundaryCondition="false" constant="false"/>
+      <species id="Y_LD_n" name="Y_LD_n" compartment="compartment" initialConcentration="0.00726801276896317" boundaryCondition="false" constant="false"/>
+      <species id="Y_DL_n" name="Y_DL_n" compartment="compartment" initialConcentration="0.062284675728266" boundaryCondition="false" constant="false"/>
+      <species id="Y_LL_n" name="Y_LL_n" compartment="compartment" initialConcentration="57.3509862079388" boundaryCondition="false" constant="false"/>
+      <species id="J_n" name="J_n" compartment="compartment" initialConcentration="69.6326058255332" boundaryCondition="false" constant="false"/>
+      <species id="J_p_n" name="J_p_n" compartment="compartment" initialConcentration="0.000366164126620987" boundaryCondition="false" constant="false"/>
+      <species id="cl_n" name="cl_n" compartment="compartment" initialConcentration="3.07982214477311e-08" boundaryCondition="false" constant="false"/>
+      <species id="mF_n" name="mF_n" compartment="compartment" initialConcentration="9.07287964824486e-09" boundaryCondition="false" constant="false"/>
+      <species id="mE_n" name="mE_n" compartment="compartment" initialConcentration="6.99075474813456e-05" boundaryCondition="false" constant="false"/>
+      <species id="Y_DD_b" name="Y_DD_b" compartment="compartment" initialConcentration="5.39209061946472" boundaryCondition="false" constant="false"/>
+      <species id="Y_LD_b" name="Y_LD_b" compartment="compartment" initialConcentration="0.000112074823349591" boundaryCondition="false" constant="false"/>
+      <species id="Y_DL_b" name="Y_DL_b" compartment="compartment" initialConcentration="0.000164543760199654" boundaryCondition="false" constant="false"/>
+      <species id="Y_LL_b" name="Y_LL_b" compartment="compartment" initialConcentration="0.0254682835236228" boundaryCondition="false" constant="false"/>
+      <species id="J_b" name="J_b" compartment="compartment" initialConcentration="1.93471999385418" boundaryCondition="false" constant="false"/>
+      <species id="J_p_b" name="J_p_b" compartment="compartment" initialConcentration="5.74243988874875e-05" boundaryCondition="false" constant="false"/>
+      <species id="cl_b" name="cl_b" compartment="compartment" initialConcentration="2.73852405472769e-06" boundaryCondition="false" constant="false"/>
+      <species id="mF_b" name="mF_b" compartment="compartment" initialConcentration="8.4066041146082e-06" boundaryCondition="false" constant="false"/>
+      <species id="mE_b" name="mE_b" compartment="compartment" initialConcentration="0.000739557028736617" boundaryCondition="false" constant="false"/>
+      <species id="BP_r" name="BP_r" compartment="compartment" initialConcentration="24810" boundaryCondition="false" constant="false"/>
+      <species id="BP_n" name="BP_n" compartment="compartment" initialConcentration="23510" boundaryCondition="false" constant="false"/>
+      <species id="BP_b" name="BP_b" compartment="compartment" initialConcentration="24510" boundaryCondition="false" constant="false"/>
+      <species id="N" name="N" compartment="compartment" initialConcentration="4.99999999999999" boundaryCondition="false" constant="false"/>
+    </listOfSpecies>
+    <listOfParameters>
+      <parameter id="b_Y_r" name="b_Y_r" value="0.0234954834264366" constant="true"/>
+      <parameter id="k_I_r" name="k_I_r" value="21.0227722515381" constant="true"/>
+      <parameter id="k_R_r" name="k_R_r" value="9.52077099154965" constant="true"/>
+      <parameter id="b_J_r" name="b_J_r" value="12.7883474243903" constant="true"/>
+      <parameter id="k_K_r" name="k_K_r" value="0.0250068166239163" constant="true"/>
+      <parameter id="k_H_r" name="k_H_r" value="6.47216766275789e-07" constant="true"/>
+      <parameter id="k_p_r" name="k_p_r" value="22.7720562844114" constant="true"/>
+      <parameter id="k_T_r" name="k_T_r" value="47.492207172563" constant="true"/>
+      <parameter id="K_J_r" name="K_J_r" value="0.395413881053884" constant="true"/>
+      <parameter id="gamma_cl_r" name="gamma_cl_r" value="3.23031666191218e-08" constant="true"/>
+      <parameter id="K_F_r" name="K_F_r" value="6.33898776641905e-05" constant="true"/>
+      <parameter id="n_r" name="n_r" value="0.419263931143284" constant="true"/>
+      <parameter id="k_N_r" name="k_N_r" value="2.73380313558095" constant="true"/>
+      <parameter id="K_N_r" name="K_N_r" value="15.8567618685861" constant="true"/>
+      <parameter id="alpha_TH_r" name="alpha_TH_r" value="90889112.2783694" constant="true"/>
+      <parameter id="gamma_mE_r" name="gamma_mE_r" value="0.53437563105517" constant="true"/>
+      <parameter id="k_gamma_r" name="k_gamma_r" value="0.0161478848091578" constant="true"/>
+      <parameter id="K_gamma_r" name="K_gamma_r" value="4.38972452385092e-08" constant="true"/>
+      <parameter id="delta_r" name="delta_r" value="1.37038423164962e-06" constant="true"/>
+      <parameter id="K_ct_r" name="K_ct_r" value="1.23087064745065" constant="true"/>
+      <parameter id="b_D_r" name="b_D_r" value="4.91265381375998e-11" constant="true"/>
+      <parameter id="b_Y_n" name="b_Y_n" value="0.111645506912506" constant="true"/>
+      <parameter id="k_I_n" name="k_I_n" value="5.82203903426777e-11" constant="true"/>
+      <parameter id="k_R_n" name="k_R_n" value="0.228623331709748" constant="true"/>
+      <parameter id="b_J_n" name="b_J_n" value="0.402554782076318" constant="true"/>
+      <parameter id="k_K_n" name="k_K_n" value="0.0169472739172171" constant="true"/>
+      <parameter id="k_H_n" name="k_H_n" value="1.44326086826057e-06" constant="true"/>
+      <parameter id="k_p_n" name="k_p_n" value="6.56809471899232" constant="true"/>
+      <parameter id="k_T_n" name="k_T_n" value="2.18599202877601" constant="true"/>
+      <parameter id="K_J_n" name="K_J_n" value="0.0881492583495021" constant="true"/>
+      <parameter id="gamma_cl_n" name="gamma_cl_n" value="3.46415905456665e-06" constant="true"/>
+      <parameter id="K_F_n" name="K_F_n" value="0.0233091021072131" constant="true"/>
+      <parameter id="n_n" name="n_n" value="0.519927195331384" constant="true"/>
+      <parameter id="k_N_n" name="k_N_n" value="1.03344188340866" constant="true"/>
+      <parameter id="K_N_n" name="K_N_n" value="2.85784711454138" constant="true"/>
+      <parameter id="alpha_TH_n" name="alpha_TH_n" value="12464591785.8643" constant="true"/>
+      <parameter id="gamma_mE_n" name="gamma_mE_n" value="66.3247643897852" constant="true"/>
+      <parameter id="k_gamma_n" name="k_gamma_n" value="2.79502576550382e-06" constant="true"/>
+      <parameter id="K_gamma_n" name="K_gamma_n" value="5.0239957187897e-07" constant="true"/>
+      <parameter id="delta_n" name="delta_n" value="1.21274864418866e-06" constant="true"/>
+      <parameter id="K_ct_n" name="K_ct_n" value="1.16218891493646" constant="true"/>
+      <parameter id="b_D_n" name="b_D_n" value="2.80430606349347e-11" constant="true"/>
+      <parameter id="b_Y_b" name="b_Y_b" value="1913.51769721578" constant="true"/>
+      <parameter id="k_I_b" name="k_I_b" value="1.52258036375865" constant="true"/>
+      <parameter id="k_R_b" name="k_R_b" value="0.0161796595912036" constant="true"/>
+      <parameter id="b_J_b" name="b_J_b" value="1.65033324871402" constant="true"/>
+      <parameter id="k_K_b" name="k_K_b" value="0.857852572717036" constant="true"/>
+      <parameter id="k_H_b" name="k_H_b" value="8.5024312736051e-08" constant="true"/>
+      <parameter id="k_p_b" name="k_p_b" value="8.52363186541281" constant="true"/>
+      <parameter id="k_T_b" name="k_T_b" value="4.82955338714204" constant="true"/>
+      <parameter id="K_J_b" name="K_J_b" value="3.76705380327582" constant="true"/>
+      <parameter id="gamma_cl_b" name="gamma_cl_b" value="0.000499881343223381" constant="true"/>
+      <parameter id="K_F_b" name="K_F_b" value="0.113169071353308" constant="true"/>
+      <parameter id="n_b" name="n_b" value="1.26946309775965" constant="true"/>
+      <parameter id="k_N_b" name="k_N_b" value="2.53588439924133" constant="true"/>
+      <parameter id="K_N_b" name="K_N_b" value="13.808739530177" constant="true"/>
+      <parameter id="alpha_TH_b" name="alpha_TH_b" value="183259170368.761" constant="true"/>
+      <parameter id="gamma_mE_b" name="gamma_mE_b" value="891.582934363732" constant="true"/>
+      <parameter id="k_gamma_b" name="k_gamma_b" value="0.001217735896" constant="true"/>
+      <parameter id="K_gamma_b" name="K_gamma_b" value="89833.8466327236" constant="true"/>
+      <parameter id="delta_b" name="delta_b" value="1.154e-06" constant="true"/>
+      <parameter id="K_ct_b" name="K_ct_b" value="1.11116102714029" constant="true"/>
+      <parameter id="I_r" name="I_r" value="0" constant="true"/>
+      <parameter id="I_b" name="I_b" value="0" constant="true"/>
+      <parameter id="ID_batch" name="ID_batch" value="0" constant="true"/>
+    </listOfParameters>
+    <listOfReactions>
+      <reaction id="Y_DD_r_r" name="Y_DD_r_r" reversible="false">
+        <listOfProducts>
+          <speciesReference species="Y_DD_r" stoichiometry="1"/>
+        </listOfProducts>
+        <listOfModifiers>
+          <modifierSpeciesReference species="mF_r"/>
+          <modifierSpeciesReference species="Y_DD_r"/>
+          <modifierSpeciesReference species="Y_LD_r"/>
+          <modifierSpeciesReference species="Y_DL_r"/>
+          <modifierSpeciesReference species="N"/>
+        </listOfModifiers>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> compartment </ci>
+              <apply>
+                <ci> Y_DD_r_r_0 </ci>
+                <ci> b_Y_r </ci>
+                <ci> K_F_r </ci>
+                <ci> mF_r </ci>
+                <ci> n_r </ci>
+                <ci> k_I_r </ci>
+                <ci> I_r </ci>
+                <ci> Y_DD_r </ci>
+                <ci> k_R_r </ci>
+                <ci> b_D_r </ci>
+                <ci> Y_LD_r </ci>
+                <ci> Y_DL_r </ci>
+                <ci> k_N_r </ci>
+                <ci> N </ci>
+                <ci> K_ct_r </ci>
+                <ci> K_N_r </ci>
+              </apply>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction id="Y_LD_r_r" name="Y_LD_r_r" reversible="false">
+        <listOfProducts>
+          <speciesReference species="Y_LD_r" stoichiometry="1"/>
+        </listOfProducts>
+        <listOfModifiers>
+          <modifierSpeciesReference species="Y_LD_r"/>
+          <modifierSpeciesReference species="Y_DD_r"/>
+          <modifierSpeciesReference species="Y_LL_r"/>
+          <modifierSpeciesReference species="N"/>
+          <modifierSpeciesReference species="mF_r"/>
+        </listOfModifiers>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> compartment </ci>
+              <apply>
+                <ci> Y_LD_r_r_0 </ci>
+                <ci> k_R_r </ci>
+                <ci> I_r </ci>
+                <ci> b_D_r </ci>
+                <ci> k_I_r </ci>
+                <ci> Y_LD_r </ci>
+                <ci> Y_DD_r </ci>
+                <ci> Y_LL_r </ci>
+                <ci> k_N_r </ci>
+                <ci> N </ci>
+                <ci> K_ct_r </ci>
+                <ci> K_N_r </ci>
+                <ci> K_F_r </ci>
+                <ci> mF_r </ci>
+                <ci> n_r </ci>
+              </apply>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction id="Y_DL_r_r" name="Y_DL_r_r" reversible="false">
+        <listOfProducts>
+          <speciesReference species="Y_DL_r" stoichiometry="1"/>
+        </listOfProducts>
+        <listOfModifiers>
+          <modifierSpeciesReference species="Y_DL_r"/>
+          <modifierSpeciesReference species="Y_DD_r"/>
+          <modifierSpeciesReference species="Y_LL_r"/>
+          <modifierSpeciesReference species="N"/>
+          <modifierSpeciesReference species="mF_r"/>
+        </listOfModifiers>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> compartment </ci>
+              <apply>
+                <ci> Y_DL_r_r_0 </ci>
+                <ci> k_R_r </ci>
+                <ci> I_r </ci>
+                <ci> b_D_r </ci>
+                <ci> k_I_r </ci>
+                <ci> Y_DL_r </ci>
+                <ci> Y_DD_r </ci>
+                <ci> Y_LL_r </ci>
+                <ci> k_N_r </ci>
+                <ci> N </ci>
+                <ci> K_ct_r </ci>
+                <ci> K_N_r </ci>
+                <ci> K_F_r </ci>
+                <ci> mF_r </ci>
+                <ci> n_r </ci>
+              </apply>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction id="Y_LL_r_r" name="Y_LL_r_r" reversible="false">
+        <listOfProducts>
+          <speciesReference species="Y_LL_r" stoichiometry="1"/>
+        </listOfProducts>
+        <listOfModifiers>
+          <modifierSpeciesReference species="Y_LL_r"/>
+          <modifierSpeciesReference species="Y_LD_r"/>
+          <modifierSpeciesReference species="Y_DL_r"/>
+          <modifierSpeciesReference species="N"/>
+          <modifierSpeciesReference species="mF_r"/>
+        </listOfModifiers>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> compartment </ci>
+              <apply>
+                <ci> Y_LL_r_r_0 </ci>
+                <ci> k_R_r </ci>
+                <ci> I_r </ci>
+                <ci> b_D_r </ci>
+                <ci> Y_LL_r </ci>
+                <ci> k_I_r </ci>
+                <ci> Y_LD_r </ci>
+                <ci> Y_DL_r </ci>
+                <ci> k_N_r </ci>
+                <ci> N </ci>
+                <ci> K_ct_r </ci>
+                <ci> K_N_r </ci>
+                <ci> K_F_r </ci>
+                <ci> mF_r </ci>
+                <ci> n_r </ci>
+              </apply>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction id="J_r_r" name="J_r_r" reversible="false">
+        <listOfProducts>
+          <speciesReference species="J_r" stoichiometry="1"/>
+        </listOfProducts>
+        <listOfModifiers>
+          <modifierSpeciesReference species="mF_r"/>
+          <modifierSpeciesReference species="Y_DD_r"/>
+          <modifierSpeciesReference species="J_r"/>
+          <modifierSpeciesReference species="J_p_r"/>
+          <modifierSpeciesReference species="Y_LD_r"/>
+          <modifierSpeciesReference species="Y_DL_r"/>
+          <modifierSpeciesReference species="Y_LL_r"/>
+          <modifierSpeciesReference species="N"/>
+        </listOfModifiers>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> compartment </ci>
+              <apply>
+                <ci> J_r_r_0 </ci>
+                <ci> b_J_r </ci>
+                <ci> K_F_r </ci>
+                <ci> mF_r </ci>
+                <ci> n_r </ci>
+                <ci> k_K_r </ci>
+                <ci> Y_DD_r </ci>
+                <ci> J_r </ci>
+                <ci> k_H_r </ci>
+                <ci> J_p_r </ci>
+                <ci> k_p_r </ci>
+                <ci> Y_LD_r </ci>
+                <ci> Y_DL_r </ci>
+                <ci> Y_LL_r </ci>
+                <ci> k_N_r </ci>
+                <ci> N </ci>
+                <ci> K_ct_r </ci>
+                <ci> K_N_r </ci>
+              </apply>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction id="J_p_r_r" name="J_p_r_r" reversible="false">
+        <listOfProducts>
+          <speciesReference species="J_p_r" stoichiometry="1"/>
+        </listOfProducts>
+        <listOfModifiers>
+          <modifierSpeciesReference species="Y_DD_r"/>
+          <modifierSpeciesReference species="J_r"/>
+          <modifierSpeciesReference species="J_p_r"/>
+          <modifierSpeciesReference species="Y_LD_r"/>
+          <modifierSpeciesReference species="Y_DL_r"/>
+          <modifierSpeciesReference species="Y_LL_r"/>
+          <modifierSpeciesReference species="N"/>
+          <modifierSpeciesReference species="mF_r"/>
+        </listOfModifiers>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> compartment </ci>
+              <apply>
+                <ci> J_p_r_r_0 </ci>
+                <ci> k_K_r </ci>
+                <ci> Y_DD_r </ci>
+                <ci> J_r </ci>
+                <ci> k_H_r </ci>
+                <ci> J_p_r </ci>
+                <ci> k_p_r </ci>
+                <ci> Y_LD_r </ci>
+                <ci> Y_DL_r </ci>
+                <ci> Y_LL_r </ci>
+                <ci> k_N_r </ci>
+                <ci> N </ci>
+                <ci> K_ct_r </ci>
+                <ci> K_N_r </ci>
+                <ci> K_F_r </ci>
+                <ci> mF_r </ci>
+                <ci> n_r </ci>
+              </apply>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction id="cl_r_r" name="cl_r_r" reversible="false">
+        <listOfProducts>
+          <speciesReference species="cl_r" stoichiometry="1"/>
+        </listOfProducts>
+        <listOfModifiers>
+          <modifierSpeciesReference species="J_p_r"/>
+          <modifierSpeciesReference species="mF_r"/>
+          <modifierSpeciesReference species="N"/>
+          <modifierSpeciesReference species="cl_r"/>
+        </listOfModifiers>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> compartment </ci>
+              <apply>
+                <ci> cl_r_r_0 </ci>
+                <ci> k_T_r </ci>
+                <ci> J_p_r </ci>
+                <ci> K_J_r </ci>
+                <ci> K_F_r </ci>
+                <ci> mF_r </ci>
+                <ci> n_r </ci>
+                <ci> gamma_cl_r </ci>
+                <ci> k_N_r </ci>
+                <ci> N </ci>
+                <ci> K_ct_r </ci>
+                <ci> K_N_r </ci>
+                <ci> cl_r </ci>
+              </apply>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction id="mF_r_r" name="mF_r_r" reversible="false">
+        <listOfProducts>
+          <speciesReference species="mF_r" stoichiometry="1"/>
+        </listOfProducts>
+        <listOfModifiers>
+          <modifierSpeciesReference species="J_p_r"/>
+          <modifierSpeciesReference species="mF_r"/>
+          <modifierSpeciesReference species="N"/>
+          <modifierSpeciesReference species="mE_r"/>
+        </listOfModifiers>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> compartment </ci>
+              <apply>
+                <ci> mF_r_r_0 </ci>
+                <ci> k_T_r </ci>
+                <ci> J_p_r </ci>
+                <ci> K_J_r </ci>
+                <ci> K_F_r </ci>
+                <ci> mF_r </ci>
+                <ci> n_r </ci>
+                <ci> k_N_r </ci>
+                <ci> N </ci>
+                <ci> K_ct_r </ci>
+                <ci> K_N_r </ci>
+                <ci> alpha_TH_r </ci>
+                <ci> mE_r </ci>
+              </apply>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction id="mE_r_r" name="mE_r_r" reversible="false">
+        <listOfProducts>
+          <speciesReference species="mE_r" stoichiometry="1"/>
+        </listOfProducts>
+        <listOfModifiers>
+          <modifierSpeciesReference species="cl_r"/>
+          <modifierSpeciesReference species="mF_r"/>
+          <modifierSpeciesReference species="N"/>
+          <modifierSpeciesReference species="mE_r"/>
+        </listOfModifiers>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> compartment </ci>
+              <apply>
+                <ci> mE_r_r_0 </ci>
+                <ci> k_gamma_r </ci>
+                <ci> K_gamma_r </ci>
+                <ci> cl_r </ci>
+                <ci> K_F_r </ci>
+                <ci> mF_r </ci>
+                <ci> n_r </ci>
+                <ci> gamma_mE_r </ci>
+                <ci> k_N_r </ci>
+                <ci> N </ci>
+                <ci> K_ct_r </ci>
+                <ci> K_N_r </ci>
+                <ci> mE_r </ci>
+                <ci> alpha_TH_r </ci>
+              </apply>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction id="BP_r_r" name="BP_r_r" reversible="false">
+        <listOfProducts>
+          <speciesReference species="BP_r" stoichiometry="1"/>
+        </listOfProducts>
+        <listOfModifiers>
+          <modifierSpeciesReference species="N"/>
+          <modifierSpeciesReference species="mF_r"/>
+          <modifierSpeciesReference species="BP_r"/>
+        </listOfModifiers>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> compartment </ci>
+              <apply>
+                <ci> BP_r_r_0 </ci>
+                <ci> k_N_r </ci>
+                <ci> N </ci>
+                <ci> K_ct_r </ci>
+                <ci> K_N_r </ci>
+                <ci> K_F_r </ci>
+                <ci> mF_r </ci>
+                <ci> n_r </ci>
+                <ci> BP_r </ci>
+              </apply>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction id="Y_DD_n_r" name="Y_DD_n_r" reversible="false">
+        <listOfProducts>
+          <speciesReference species="Y_DD_n" stoichiometry="1"/>
+        </listOfProducts>
+        <listOfModifiers>
+          <modifierSpeciesReference species="mF_n"/>
+          <modifierSpeciesReference species="Y_DD_n"/>
+          <modifierSpeciesReference species="Y_LD_n"/>
+          <modifierSpeciesReference species="Y_DL_n"/>
+          <modifierSpeciesReference species="N"/>
+        </listOfModifiers>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> compartment </ci>
+              <apply>
+                <ci> Y_DD_n_r_0 </ci>
+                <ci> b_Y_n </ci>
+                <ci> K_F_n </ci>
+                <ci> mF_n </ci>
+                <ci> n_n </ci>
+                <ci> k_I_n </ci>
+                <ci> I_r </ci>
+                <ci> Y_DD_n </ci>
+                <ci> k_R_n </ci>
+                <ci> b_D_n </ci>
+                <ci> Y_LD_n </ci>
+                <ci> Y_DL_n </ci>
+                <ci> k_N_n </ci>
+                <ci> N </ci>
+                <ci> K_ct_n </ci>
+                <ci> K_N_n </ci>
+              </apply>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction id="Y_LD_n_r" name="Y_LD_n_r" reversible="false">
+        <listOfProducts>
+          <speciesReference species="Y_LD_n" stoichiometry="1"/>
+        </listOfProducts>
+        <listOfModifiers>
+          <modifierSpeciesReference species="Y_LD_n"/>
+          <modifierSpeciesReference species="Y_DD_n"/>
+          <modifierSpeciesReference species="Y_LL_n"/>
+          <modifierSpeciesReference species="N"/>
+          <modifierSpeciesReference species="mF_n"/>
+        </listOfModifiers>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> compartment </ci>
+              <apply>
+                <ci> Y_LD_n_r_0 </ci>
+                <ci> k_R_n </ci>
+                <ci> I_r </ci>
+                <ci> b_D_n </ci>
+                <ci> k_I_n </ci>
+                <ci> Y_LD_n </ci>
+                <ci> Y_DD_n </ci>
+                <ci> Y_LL_n </ci>
+                <ci> k_N_n </ci>
+                <ci> N </ci>
+                <ci> K_ct_n </ci>
+                <ci> K_N_n </ci>
+                <ci> K_F_n </ci>
+                <ci> mF_n </ci>
+                <ci> n_n </ci>
+              </apply>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction id="Y_DL_n_r" name="Y_DL_n_r" reversible="false">
+        <listOfProducts>
+          <speciesReference species="Y_DL_n" stoichiometry="1"/>
+        </listOfProducts>
+        <listOfModifiers>
+          <modifierSpeciesReference species="Y_DL_n"/>
+          <modifierSpeciesReference species="Y_DD_n"/>
+          <modifierSpeciesReference species="Y_LL_n"/>
+          <modifierSpeciesReference species="N"/>
+          <modifierSpeciesReference species="mF_n"/>
+        </listOfModifiers>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> compartment </ci>
+              <apply>
+                <ci> Y_DL_n_r_0 </ci>
+                <ci> k_R_n </ci>
+                <ci> I_r </ci>
+                <ci> b_D_n </ci>
+                <ci> k_I_n </ci>
+                <ci> Y_DL_n </ci>
+                <ci> Y_DD_n </ci>
+                <ci> Y_LL_n </ci>
+                <ci> k_N_n </ci>
+                <ci> N </ci>
+                <ci> K_ct_n </ci>
+                <ci> K_N_n </ci>
+                <ci> K_F_n </ci>
+                <ci> mF_n </ci>
+                <ci> n_n </ci>
+              </apply>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction id="Y_LL_n_r" name="Y_LL_n_r" reversible="false">
+        <listOfProducts>
+          <speciesReference species="Y_LL_n" stoichiometry="1"/>
+        </listOfProducts>
+        <listOfModifiers>
+          <modifierSpeciesReference species="Y_LL_n"/>
+          <modifierSpeciesReference species="Y_LD_n"/>
+          <modifierSpeciesReference species="Y_DL_n"/>
+          <modifierSpeciesReference species="N"/>
+          <modifierSpeciesReference species="mF_n"/>
+        </listOfModifiers>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> compartment </ci>
+              <apply>
+                <ci> Y_LL_n_r_0 </ci>
+                <ci> k_R_n </ci>
+                <ci> I_r </ci>
+                <ci> b_D_n </ci>
+                <ci> Y_LL_n </ci>
+                <ci> k_I_n </ci>
+                <ci> Y_LD_n </ci>
+                <ci> Y_DL_n </ci>
+                <ci> k_N_n </ci>
+                <ci> N </ci>
+                <ci> K_ct_n </ci>
+                <ci> K_N_n </ci>
+                <ci> K_F_n </ci>
+                <ci> mF_n </ci>
+                <ci> n_n </ci>
+              </apply>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction id="J_n_r" name="J_n_r" reversible="false">
+        <listOfProducts>
+          <speciesReference species="J_n" stoichiometry="1"/>
+        </listOfProducts>
+        <listOfModifiers>
+          <modifierSpeciesReference species="mF_n"/>
+          <modifierSpeciesReference species="Y_DD_n"/>
+          <modifierSpeciesReference species="J_n"/>
+          <modifierSpeciesReference species="J_p_n"/>
+          <modifierSpeciesReference species="Y_LD_n"/>
+          <modifierSpeciesReference species="Y_DL_n"/>
+          <modifierSpeciesReference species="Y_LL_n"/>
+          <modifierSpeciesReference species="N"/>
+        </listOfModifiers>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> compartment </ci>
+              <apply>
+                <ci> J_n_r_0 </ci>
+                <ci> b_J_n </ci>
+                <ci> K_F_n </ci>
+                <ci> mF_n </ci>
+                <ci> n_n </ci>
+                <ci> k_K_n </ci>
+                <ci> Y_DD_n </ci>
+                <ci> J_n </ci>
+                <ci> k_H_n </ci>
+                <ci> J_p_n </ci>
+                <ci> k_p_n </ci>
+                <ci> Y_LD_n </ci>
+                <ci> Y_DL_n </ci>
+                <ci> Y_LL_n </ci>
+                <ci> k_N_n </ci>
+                <ci> N </ci>
+                <ci> K_ct_n </ci>
+                <ci> K_N_n </ci>
+              </apply>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction id="J_p_n_r" name="J_p_n_r" reversible="false">
+        <listOfProducts>
+          <speciesReference species="J_p_n" stoichiometry="1"/>
+        </listOfProducts>
+        <listOfModifiers>
+          <modifierSpeciesReference species="Y_DD_n"/>
+          <modifierSpeciesReference species="J_n"/>
+          <modifierSpeciesReference species="J_p_n"/>
+          <modifierSpeciesReference species="Y_LD_n"/>
+          <modifierSpeciesReference species="Y_DL_n"/>
+          <modifierSpeciesReference species="Y_LL_n"/>
+          <modifierSpeciesReference species="N"/>
+          <modifierSpeciesReference species="mF_n"/>
+        </listOfModifiers>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> compartment </ci>
+              <apply>
+                <ci> J_p_n_r_0 </ci>
+                <ci> k_K_n </ci>
+                <ci> Y_DD_n </ci>
+                <ci> J_n </ci>
+                <ci> k_H_n </ci>
+                <ci> J_p_n </ci>
+                <ci> k_p_n </ci>
+                <ci> Y_LD_n </ci>
+                <ci> Y_DL_n </ci>
+                <ci> Y_LL_n </ci>
+                <ci> k_N_n </ci>
+                <ci> N </ci>
+                <ci> K_ct_n </ci>
+                <ci> K_N_n </ci>
+                <ci> K_F_n </ci>
+                <ci> mF_n </ci>
+                <ci> n_n </ci>
+              </apply>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction id="cl_n_r" name="cl_n_r" reversible="false">
+        <listOfProducts>
+          <speciesReference species="cl_n" stoichiometry="1"/>
+        </listOfProducts>
+        <listOfModifiers>
+          <modifierSpeciesReference species="J_p_n"/>
+          <modifierSpeciesReference species="mF_n"/>
+          <modifierSpeciesReference species="N"/>
+          <modifierSpeciesReference species="cl_n"/>
+        </listOfModifiers>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> compartment </ci>
+              <apply>
+                <ci> cl_n_r_0 </ci>
+                <ci> k_T_n </ci>
+                <ci> J_p_n </ci>
+                <ci> K_J_n </ci>
+                <ci> K_F_n </ci>
+                <ci> mF_n </ci>
+                <ci> n_n </ci>
+                <ci> gamma_cl_n </ci>
+                <ci> k_N_n </ci>
+                <ci> N </ci>
+                <ci> K_ct_n </ci>
+                <ci> K_N_n </ci>
+                <ci> cl_n </ci>
+              </apply>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction id="mF_n_r" name="mF_n_r" reversible="false">
+        <listOfProducts>
+          <speciesReference species="mF_n" stoichiometry="1"/>
+        </listOfProducts>
+        <listOfModifiers>
+          <modifierSpeciesReference species="J_p_n"/>
+          <modifierSpeciesReference species="mF_n"/>
+          <modifierSpeciesReference species="N"/>
+          <modifierSpeciesReference species="mE_n"/>
+        </listOfModifiers>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> compartment </ci>
+              <apply>
+                <ci> mF_n_r_0 </ci>
+                <ci> k_T_n </ci>
+                <ci> J_p_n </ci>
+                <ci> K_J_n </ci>
+                <ci> K_F_n </ci>
+                <ci> mF_n </ci>
+                <ci> n_n </ci>
+                <ci> k_N_n </ci>
+                <ci> N </ci>
+                <ci> K_ct_n </ci>
+                <ci> K_N_n </ci>
+                <ci> alpha_TH_n </ci>
+                <ci> mE_n </ci>
+              </apply>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction id="mE_n_r" name="mE_n_r" reversible="false">
+        <listOfProducts>
+          <speciesReference species="mE_n" stoichiometry="1"/>
+        </listOfProducts>
+        <listOfModifiers>
+          <modifierSpeciesReference species="cl_n"/>
+          <modifierSpeciesReference species="mF_n"/>
+          <modifierSpeciesReference species="N"/>
+          <modifierSpeciesReference species="mE_n"/>
+        </listOfModifiers>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> compartment </ci>
+              <apply>
+                <ci> mE_n_r_0 </ci>
+                <ci> k_gamma_n </ci>
+                <ci> K_gamma_n </ci>
+                <ci> cl_n </ci>
+                <ci> K_F_n </ci>
+                <ci> mF_n </ci>
+                <ci> n_n </ci>
+                <ci> gamma_mE_n </ci>
+                <ci> k_N_n </ci>
+                <ci> N </ci>
+                <ci> K_ct_n </ci>
+                <ci> K_N_n </ci>
+                <ci> mE_n </ci>
+                <ci> alpha_TH_n </ci>
+              </apply>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction id="BP_n_r" name="BP_n_r" reversible="false">
+        <listOfProducts>
+          <speciesReference species="BP_n" stoichiometry="1"/>
+        </listOfProducts>
+        <listOfModifiers>
+          <modifierSpeciesReference species="N"/>
+          <modifierSpeciesReference species="mF_n"/>
+          <modifierSpeciesReference species="BP_n"/>
+        </listOfModifiers>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> compartment </ci>
+              <apply>
+                <ci> BP_n_r_0 </ci>
+                <ci> k_N_n </ci>
+                <ci> N </ci>
+                <ci> K_ct_n </ci>
+                <ci> K_N_n </ci>
+                <ci> K_F_n </ci>
+                <ci> mF_n </ci>
+                <ci> n_n </ci>
+                <ci> BP_n </ci>
+              </apply>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction id="Y_DD_b_r" name="Y_DD_b_r" reversible="false">
+        <listOfProducts>
+          <speciesReference species="Y_DD_b" stoichiometry="1"/>
+        </listOfProducts>
+        <listOfModifiers>
+          <modifierSpeciesReference species="mF_b"/>
+          <modifierSpeciesReference species="Y_DD_b"/>
+          <modifierSpeciesReference species="Y_LD_b"/>
+          <modifierSpeciesReference species="Y_DL_b"/>
+          <modifierSpeciesReference species="N"/>
+        </listOfModifiers>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> compartment </ci>
+              <apply>
+                <ci> Y_DD_b_r_0 </ci>
+                <ci> b_Y_b </ci>
+                <ci> K_F_b </ci>
+                <ci> mF_b </ci>
+                <ci> n_b </ci>
+                <ci> k_I_b </ci>
+                <ci> I_b </ci>
+                <ci> Y_DD_b </ci>
+                <ci> k_R_b </ci>
+                <ci> Y_LD_b </ci>
+                <ci> Y_DL_b </ci>
+                <ci> k_N_b </ci>
+                <ci> N </ci>
+                <ci> K_ct_b </ci>
+                <ci> K_N_b </ci>
+              </apply>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction id="Y_LD_b_r" name="Y_LD_b_r" reversible="false">
+        <listOfProducts>
+          <speciesReference species="Y_LD_b" stoichiometry="1"/>
+        </listOfProducts>
+        <listOfModifiers>
+          <modifierSpeciesReference species="Y_LD_b"/>
+          <modifierSpeciesReference species="Y_DD_b"/>
+          <modifierSpeciesReference species="Y_LL_b"/>
+          <modifierSpeciesReference species="N"/>
+          <modifierSpeciesReference species="mF_b"/>
+        </listOfModifiers>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> compartment </ci>
+              <apply>
+                <ci> Y_LD_b_r_0 </ci>
+                <ci> k_R_b </ci>
+                <ci> k_I_b </ci>
+                <ci> I_b </ci>
+                <ci> Y_LD_b </ci>
+                <ci> Y_DD_b </ci>
+                <ci> Y_LL_b </ci>
+                <ci> k_N_b </ci>
+                <ci> N </ci>
+                <ci> K_ct_b </ci>
+                <ci> K_N_b </ci>
+                <ci> K_F_b </ci>
+                <ci> mF_b </ci>
+                <ci> n_b </ci>
+              </apply>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction id="Y_DL_b_r" name="Y_DL_b_r" reversible="false">
+        <listOfProducts>
+          <speciesReference species="Y_DL_b" stoichiometry="1"/>
+        </listOfProducts>
+        <listOfModifiers>
+          <modifierSpeciesReference species="Y_DL_b"/>
+          <modifierSpeciesReference species="Y_DD_b"/>
+          <modifierSpeciesReference species="Y_LL_b"/>
+          <modifierSpeciesReference species="N"/>
+          <modifierSpeciesReference species="mF_b"/>
+        </listOfModifiers>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> compartment </ci>
+              <apply>
+                <ci> Y_DL_b_r_0 </ci>
+                <ci> k_R_b </ci>
+                <ci> k_I_b </ci>
+                <ci> I_b </ci>
+                <ci> Y_DL_b </ci>
+                <ci> Y_DD_b </ci>
+                <ci> Y_LL_b </ci>
+                <ci> k_N_b </ci>
+                <ci> N </ci>
+                <ci> K_ct_b </ci>
+                <ci> K_N_b </ci>
+                <ci> K_F_b </ci>
+                <ci> mF_b </ci>
+                <ci> n_b </ci>
+              </apply>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction id="Y_LL_b_r" name="Y_LL_b_r" reversible="false">
+        <listOfProducts>
+          <speciesReference species="Y_LL_b" stoichiometry="1"/>
+        </listOfProducts>
+        <listOfModifiers>
+          <modifierSpeciesReference species="Y_LL_b"/>
+          <modifierSpeciesReference species="Y_LD_b"/>
+          <modifierSpeciesReference species="Y_DL_b"/>
+          <modifierSpeciesReference species="N"/>
+          <modifierSpeciesReference species="mF_b"/>
+        </listOfModifiers>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> compartment </ci>
+              <apply>
+                <ci> Y_LL_b_r_0 </ci>
+                <ci> k_R_b </ci>
+                <ci> Y_LL_b </ci>
+                <ci> k_I_b </ci>
+                <ci> I_b </ci>
+                <ci> Y_LD_b </ci>
+                <ci> Y_DL_b </ci>
+                <ci> k_N_b </ci>
+                <ci> N </ci>
+                <ci> K_ct_b </ci>
+                <ci> K_N_b </ci>
+                <ci> K_F_b </ci>
+                <ci> mF_b </ci>
+                <ci> n_b </ci>
+              </apply>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction id="J_b_r" name="J_b_r" reversible="false">
+        <listOfProducts>
+          <speciesReference species="J_b" stoichiometry="1"/>
+        </listOfProducts>
+        <listOfModifiers>
+          <modifierSpeciesReference species="mF_b"/>
+          <modifierSpeciesReference species="Y_DD_b"/>
+          <modifierSpeciesReference species="J_b"/>
+          <modifierSpeciesReference species="J_p_b"/>
+          <modifierSpeciesReference species="Y_LD_b"/>
+          <modifierSpeciesReference species="Y_DL_b"/>
+          <modifierSpeciesReference species="Y_LL_b"/>
+          <modifierSpeciesReference species="N"/>
+        </listOfModifiers>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> compartment </ci>
+              <apply>
+                <ci> J_b_r_0 </ci>
+                <ci> b_J_b </ci>
+                <ci> K_F_b </ci>
+                <ci> mF_b </ci>
+                <ci> n_b </ci>
+                <ci> k_K_b </ci>
+                <ci> Y_DD_b </ci>
+                <ci> J_b </ci>
+                <ci> k_H_b </ci>
+                <ci> J_p_b </ci>
+                <ci> k_p_b </ci>
+                <ci> Y_LD_b </ci>
+                <ci> Y_DL_b </ci>
+                <ci> Y_LL_b </ci>
+                <ci> k_N_b </ci>
+                <ci> N </ci>
+                <ci> K_ct_b </ci>
+                <ci> K_N_b </ci>
+              </apply>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction id="J_p_b_r" name="J_p_b_r" reversible="false">
+        <listOfProducts>
+          <speciesReference species="J_p_b" stoichiometry="1"/>
+        </listOfProducts>
+        <listOfModifiers>
+          <modifierSpeciesReference species="Y_DD_b"/>
+          <modifierSpeciesReference species="J_b"/>
+          <modifierSpeciesReference species="J_p_b"/>
+          <modifierSpeciesReference species="Y_LD_b"/>
+          <modifierSpeciesReference species="Y_DL_b"/>
+          <modifierSpeciesReference species="Y_LL_b"/>
+          <modifierSpeciesReference species="N"/>
+          <modifierSpeciesReference species="mF_b"/>
+        </listOfModifiers>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> compartment </ci>
+              <apply>
+                <ci> J_p_b_r_0 </ci>
+                <ci> k_K_b </ci>
+                <ci> Y_DD_b </ci>
+                <ci> J_b </ci>
+                <ci> k_H_b </ci>
+                <ci> J_p_b </ci>
+                <ci> k_p_b </ci>
+                <ci> Y_LD_b </ci>
+                <ci> Y_DL_b </ci>
+                <ci> Y_LL_b </ci>
+                <ci> k_N_b </ci>
+                <ci> N </ci>
+                <ci> K_ct_b </ci>
+                <ci> K_N_b </ci>
+                <ci> K_F_b </ci>
+                <ci> mF_b </ci>
+                <ci> n_b </ci>
+              </apply>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction id="cl_b_r" name="cl_b_r" reversible="false">
+        <listOfProducts>
+          <speciesReference species="cl_b" stoichiometry="1"/>
+        </listOfProducts>
+        <listOfModifiers>
+          <modifierSpeciesReference species="J_p_b"/>
+          <modifierSpeciesReference species="mF_b"/>
+          <modifierSpeciesReference species="N"/>
+          <modifierSpeciesReference species="cl_b"/>
+        </listOfModifiers>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> compartment </ci>
+              <apply>
+                <ci> cl_b_r_0 </ci>
+                <ci> k_T_b </ci>
+                <ci> J_p_b </ci>
+                <ci> K_J_b </ci>
+                <ci> K_F_b </ci>
+                <ci> mF_b </ci>
+                <ci> n_b </ci>
+                <ci> gamma_cl_b </ci>
+                <ci> k_N_b </ci>
+                <ci> N </ci>
+                <ci> K_ct_b </ci>
+                <ci> K_N_b </ci>
+                <ci> cl_b </ci>
+              </apply>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction id="mF_b_r" name="mF_b_r" reversible="false">
+        <listOfProducts>
+          <speciesReference species="mF_b" stoichiometry="1"/>
+        </listOfProducts>
+        <listOfModifiers>
+          <modifierSpeciesReference species="J_p_b"/>
+          <modifierSpeciesReference species="mF_b"/>
+          <modifierSpeciesReference species="N"/>
+          <modifierSpeciesReference species="mE_b"/>
+        </listOfModifiers>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> compartment </ci>
+              <apply>
+                <ci> mF_b_r_0 </ci>
+                <ci> k_T_b </ci>
+                <ci> J_p_b </ci>
+                <ci> K_J_b </ci>
+                <ci> K_F_b </ci>
+                <ci> mF_b </ci>
+                <ci> n_b </ci>
+                <ci> k_N_b </ci>
+                <ci> N </ci>
+                <ci> K_ct_b </ci>
+                <ci> K_N_b </ci>
+                <ci> alpha_TH_b </ci>
+                <ci> mE_b </ci>
+              </apply>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction id="mE_b_r" name="mE_b_r" reversible="false">
+        <listOfProducts>
+          <speciesReference species="mE_b" stoichiometry="1"/>
+        </listOfProducts>
+        <listOfModifiers>
+          <modifierSpeciesReference species="cl_b"/>
+          <modifierSpeciesReference species="mF_b"/>
+          <modifierSpeciesReference species="N"/>
+          <modifierSpeciesReference species="mE_b"/>
+        </listOfModifiers>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> compartment </ci>
+              <apply>
+                <ci> mE_b_r_0 </ci>
+                <ci> k_gamma_b </ci>
+                <ci> K_gamma_b </ci>
+                <ci> cl_b </ci>
+                <ci> K_F_b </ci>
+                <ci> mF_b </ci>
+                <ci> n_b </ci>
+                <ci> gamma_mE_b </ci>
+                <ci> k_N_b </ci>
+                <ci> N </ci>
+                <ci> K_ct_b </ci>
+                <ci> K_N_b </ci>
+                <ci> mE_b </ci>
+                <ci> alpha_TH_b </ci>
+              </apply>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction id="BP_b_r" name="BP_b_r" reversible="false">
+        <listOfProducts>
+          <speciesReference species="BP_b" stoichiometry="1"/>
+        </listOfProducts>
+        <listOfModifiers>
+          <modifierSpeciesReference species="N"/>
+          <modifierSpeciesReference species="mF_b"/>
+          <modifierSpeciesReference species="BP_b"/>
+        </listOfModifiers>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> compartment </ci>
+              <apply>
+                <ci> BP_b_r_0 </ci>
+                <ci> k_N_b </ci>
+                <ci> N </ci>
+                <ci> K_ct_b </ci>
+                <ci> K_N_b </ci>
+                <ci> K_F_b </ci>
+                <ci> mF_b </ci>
+                <ci> n_b </ci>
+                <ci> BP_b </ci>
+              </apply>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction id="N_r" name="N_r" reversible="false">
+        <listOfReactants>
+          <speciesReference species="N" stoichiometry="1"/>
+        </listOfReactants>
+        <listOfModifiers>
+          <modifierSpeciesReference species="N"/>
+          <modifierSpeciesReference species="mF_r"/>
+          <modifierSpeciesReference species="BP_r"/>
+          <modifierSpeciesReference species="mF_n"/>
+          <modifierSpeciesReference species="BP_n"/>
+          <modifierSpeciesReference species="mF_b"/>
+          <modifierSpeciesReference species="BP_b"/>
+        </listOfModifiers>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> compartment </ci>
+              <apply>
+                <ci> N_r_0 </ci>
+                <ci> delta_r </ci>
+                <ci> k_N_r </ci>
+                <ci> N </ci>
+                <ci> K_ct_r </ci>
+                <ci> K_N_r </ci>
+                <ci> K_F_r </ci>
+                <ci> mF_r </ci>
+                <ci> n_r </ci>
+                <ci> BP_r </ci>
+                <ci> delta_n </ci>
+                <ci> k_N_n </ci>
+                <ci> K_ct_n </ci>
+                <ci> K_N_n </ci>
+                <ci> K_F_n </ci>
+                <ci> mF_n </ci>
+                <ci> n_n </ci>
+                <ci> BP_n </ci>
+                <ci> delta_b </ci>
+                <ci> k_N_b </ci>
+                <ci> K_ct_b </ci>
+                <ci> K_N_b </ci>
+                <ci> K_F_b </ci>
+                <ci> mF_b </ci>
+                <ci> n_b </ci>
+                <ci> BP_b </ci>
+              </apply>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+    </listOfReactions>
+  </model>
+</sbml>
